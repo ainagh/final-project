@@ -112,7 +112,7 @@ Como objetivos para el día de hoy, estaría en primer lugar acabar de entender 
 
 ###### Jueves 09, Febrero 2023
 
-Quizás siendo hoy un poco optimista, como objetivos para el día de hoy tengo fijarme en la página de Home, en añadir, eliminar, editar y marcar las tasks. También quiero crear la alert  del delete. Teniendo en cuenta que tengo ya alguna lógica en los componentes, me puedo centrar un poco más en entenderlo todo al 100% aunque esto me retrase el ritmo del proyecto. 
+Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijarme en la página de Home, en añadir, eliminar, editar y marcar las tasks. También quiero crear la alert  del delete. Teniendo en cuenta que tengo ya alguna lógica en los componentes, me puedo centrar un poco más en entenderlo todo al 100% aunque esto me retrase el ritmo del proyecto. 
 
 - [ ] Trabajar en la lógica en los componentes NewTasks y TaskItem, lo que incluye:
 - [ ] Conseguir que al añadir o eliminar una task, no se tenga que refrescar la página para que aparezcan
