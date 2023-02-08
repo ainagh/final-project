@@ -42,7 +42,7 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
      <ul>
      <li><a href="#backlog">Back log</a></li>
         <li><a href="#day-one">Martes, 07 Febrero 2023</a></li>
-        <li><a href="#day-two">Miercole, 08 Febrero 2023</a></li>
+        <li><a href="#day-two">Miercoles, 08 Febrero 2023</a></li>
         <li><a href="#day-three">Jueves, 09 Febrero 2023</a></li>
       </ul>
     </li>
