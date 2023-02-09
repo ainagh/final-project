@@ -46,9 +46,20 @@ const deleteTask = async() => {
     emit("updateTask")
 };
 
+const showErrorMess = ref (false)
+const errorMess = ref(null);
+
+
 const sendData = async () => {
     if(newTitle.value.length < 4 || newDescription.value.length <4){
+        
         //Lanzar un error
+        showErrorMess.value = true;
+        errorMess.value = "The task title or description is empty or just too short. (That's what she said)";
+        setTimeout(() => {
+        showErrorMess.value = false;
+        }, 5000);
+        
         console.log("Hola pepsicola");
     } else {
         taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
