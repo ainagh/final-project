@@ -112,20 +112,23 @@ Como objetivos para el día de hoy, estaría en primer lugar acabar de entender 
 
 ###### Jueves 09, Febrero 2023
 
-<<<<<<< HEAD
 Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijarme en la página de Home, en añadir, eliminar, editar y marcar las tasks. También quiero crear la alert  del delete. Teniendo en cuenta que tengo ya alguna lógica en los componentes, me puedo centrar un poco más en buscar información y entenderlo y todo al 100% aunque esto me retrase el ritmo del proyecto. 
-=======
-Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijarme en la página de Home, en añadir, eliminar, editar y marcar las tasks. También quiero crear la alert  del delete. Teniendo en cuenta que tengo ya alguna lógica en los componentes, me puedo centrar un poco más en entenderlo todo al 100% aunque esto me retrase el ritmo del proyecto. 
->>>>>>> 9f65688c6e060822b8462df7511405ca98d86ced
 
-- [ ] Trabajar en la lógica en los componentes NewTasks y TaskItem, lo que incluye:
-- [ ] Conseguir que al añadir o eliminar una task, no se tenga que refrescar la página para que aparezcan
-- [ ] Añadir e implementar los buttons de "Mark as Completed" y "Edit Task"
+- [x] Trabajar en la lógica en los componentes NewTasks y TaskItem, lo que incluye:
+- [x] Conseguir que al añadir o eliminar una task, no se tenga que refrescar la página para que aparezcan
+- [x] Añadir e implementar los buttons de "Mark as Completed" y "Edit Task"
 - [ ] Hacer que salte una alert cuando se quiere eliminar una task
 
 
 #### Day Four
+
 ###### Viernes 10, Febrero 2023
+
+Para el día de hoy, me gustaría poder tener la lógica de la página Home terminada, por lo menos lo básico necesario. Y por supuesto me gustaría poder empezar con el apartado de Profiles.
+
+- [ ] Acabar el toggle del button "Mark as Completed"
+- [ ] Hacer que salte una alert modal cuando se quiere eliminar una task
+- [ ] Empezar la página de Profiles
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

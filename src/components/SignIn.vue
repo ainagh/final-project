@@ -22,6 +22,7 @@
     <button class="button" type="submit">Sign In</button>
     <p>Don't have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
   </form>
+  <p v-if="aviso">Email or Password not correct</p>
   </div>
   </div>
 
@@ -32,6 +33,7 @@ import { ref } from "vue";
 import PersonalRouter from "./PersonalRouter.vue";
 import { useRoute, useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
+import { advancePositionWithClone } from "@vue/compiler-core";
 
 // Route Variables
 const route = "/auth/signup";
@@ -44,6 +46,7 @@ const buttonText = "Sign Up";
 const redirect = useRouter();
 const email = ref("");
 const password = ref("");
+const aviso = ref (false)
 
 const signIn = async () => {
   console.log("first")
@@ -53,6 +56,10 @@ const signIn = async () => {
     redirect.push ({ path: "/"})
 
   } catch (error) {
+    aviso.value = true
+    setTimeout(() => {
+      aviso.value = false
+    }, 10000);
     throw error;
   }
   }

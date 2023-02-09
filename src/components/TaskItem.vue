@@ -1,8 +1,8 @@
 <template>
 <div class="container">
-    <h3>{{task.title}}</h3>
-    <h3>{{ task.description }}</h3>
-    <button @click="">Mark as Completed</button>
+    <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
+    <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
+    <button @click="toggleTask">Mark as Completed</button>
     <button @click="deleteTask">Delete {{task.title}}</button>
     <button @click="inputToggle">Edit {{task.title}}</button>
     <div v-if="showInput">
@@ -14,6 +14,9 @@
             <p>Insert Description</p>
             <input type="text" v-model="newDescription" placeholder="Insert description...">
         </div>
+        <div class="absolutePosition" v-if="showErrorMessage">
+        <p class="error-text">{{ errorMessage }}</p>
+    </div>
         <button @click="sendData">Send Data</button>
     </div>
     
@@ -32,6 +35,12 @@ const props = defineProps({
     task: Object,
 });
 
+console.log(props.task);
+
+if (props.task.is_complete === true) {
+    console.log("completed")
+}
+
 const showInput = ref(false);
 const newTitle = ref("");
 const newDescription = ref("");
@@ -40,26 +49,25 @@ function inputToggle(){
     showInput.value = !showInput.value;
 }
 
+
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
     emit("updateTask")
 };
 
-const showErrorMess = ref (false)
-const errorMess = ref(null);
-
+const showErrorMessage = ref ()
+const errorMessage = ref(null);
 
 const sendData = async () => {
-    if(newTitle.value.length < 4 || newDescription.value.length <4){
+    if(newTitle.value.length < 4 || newDescription.value.length < 4){
         
-        //Lanzar un error
-        showErrorMess.value = true;
-        errorMess.value = "The task title or description is empty or just too short. (That's what she said)";
+        showErrorMessage.value = true;
+        errorMessage.value = "The task title or description is empty or just too short. (That's what she said)";
         setTimeout(() => {
-        showErrorMess.value = false;
+        showErrorMessage.value = false;
         }, 5000);
-        
+        //Lanzar un error
         console.log("Hola pepsicola");
     } else {
         taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
@@ -68,9 +76,37 @@ const sendData = async () => {
 
 }
 
+const toggleTask = async() => {
+    await taskStore.toggleTask(props.task.id);
+    emit("updateTask")
+    console.log("modifying");
+};
+
+/* const isActive = ref(true)
+    const markCompleted = {
+      active: isActive.value
+    }
+
+    return {
+      isActive,
+      classObject
+    } */
 </script>
 
-<style></style>
+<style>
+
+/* .absolutePosition {
+ position: fixed;
+ top: 50vh; 
+ left: 50vh;
+
+} */
+
+.taskCompleted {
+ text-decoration-line: line-through;
+
+}
+</style>
 
 <!--
 **Hints**
