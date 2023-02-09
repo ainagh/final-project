@@ -1,12 +1,19 @@
 <template>
 <div class="container">
     <h3>{{task.title}}</h3>
+    <h3>{{ task.description }}</h3>
     <button @click="">Mark as Completed</button>
     <button @click="deleteTask">Delete {{task.title}}</button>
     <button @click="inputToggle">Edit {{task.title}}</button>
     <div v-if="showInput">
-        <input type="text" v-model="newTitle">
-        <input type="text" v-model="newDescription">
+        <div>
+            <p>Insert title</p>
+            <input type="text" v-model="newTitle" placeholder="Insert title...">
+        </div>
+        <div>
+            <p>Insert Description</p>
+            <input type="text" v-model="newDescription" placeholder="Insert description...">
+        </div>
         <button @click="sendData">Send Data</button>
     </div>
     
@@ -26,8 +33,8 @@ const props = defineProps({
 });
 
 const showInput = ref(false);
-const newTitle = ref("insert here new title...");
-const newDescription = ref("insert here new description...");
+const newTitle = ref("");
+const newDescription = ref("");
 
 function inputToggle(){
     showInput.value = !showInput.value;
@@ -40,8 +47,14 @@ const deleteTask = async() => {
 };
 
 const sendData = async () => {
-    taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
-    emit("updateTask");
+    if(newTitle.value.length < 4 || newDescription.value.length <4){
+        //Lanzar un error
+        console.log("Hola pepsicola");
+    } else {
+        taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
+        emit("updateTask");
+    }
+
 }
 
 </script>

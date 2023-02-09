@@ -33,11 +33,11 @@ const emit = defineEmits(["addTitle"]);
 
 // Arrow function para crear tareas.
 const addTask = async() => {
-if(name.value.length === 0 || description.value.length === 0){
+if(name.value.length < 4 || description.value.length < 4){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = 'The task title or description is empty';
+    errorMessage.value = "The task title or description is empty or just too short. (That's what she said)";
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);
