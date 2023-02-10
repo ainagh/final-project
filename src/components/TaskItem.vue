@@ -1,10 +1,19 @@
 <template>
 <div class="container">
+    <p>{{task.is_complete ? 'done :)' : 'not completed yet'}}</p>
+  <!--   <p :class="">{{  }}</p> -->
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
     <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
-    <button @click="toggleTask"> {{task.is_complete ? 'not completed yet' : 'done :)'}}</button>
-    <button @click="deleteTask">Delete {{task.title}}</button>
-    <button @click="inputToggle">Edit {{task.title}}</button>
+    <button @click="toggleTask"> {{task.is_complete ? 'Uncomplete' : 'Completed'}}</button>
+    <template  v-if="task.is_complete" >
+        <button disabled  @click="deleteTask">Delete {{task.title}}</button>
+        <button disabled @click="inputToggle">Edit {{task.title}}</button>
+    </template>
+    <template  v-else>
+        <button  @click="deleteTask">Delete {{task.title}}</button>
+        <button @click="inputToggle">Edit {{task.title}}</button>
+    </template>
+   
     <div v-if="showInput">
         <div>
             <p>Insert title</p>
@@ -19,7 +28,7 @@
     </div>
         <button @click="sendData">Send Data</button>
     </div>
-    
+    <Modal/>
 </div>
 </template>
 
@@ -27,6 +36,7 @@
 import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
+import Modal from './Modal.vue'
 
 const taskStore = useTaskStore();
 const emit = defineEmits(["updateTask"]);
@@ -74,7 +84,6 @@ const sendData = async () => {
         taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
         emit("updateTask");
     }
-
 }
 
 const toggleTask = async() => {
@@ -82,6 +91,19 @@ const toggleTask = async() => {
     emit("updateTask")
     console.log("modifying");
 };
+
+const editMessage = async () => {
+    if (props.task.is_complete === true){
+        
+        showErrorMessage.value = true;
+        errorMessage.value = "Mark task as uncomplete to edit it :)";
+        setTimeout(() => {
+        showErrorMessage.value = false;
+        }, 5000);
+        //Lanzar un error
+        console.log("Hola pepsicola");
+    }
+}
 
 /* const isActive = ref(true)
     const markCompleted = {
@@ -96,17 +118,11 @@ const toggleTask = async() => {
 
 <style>
 
-/* .absolutePosition {
- position: fixed;
- top: 50vh; 
- left: 50vh;
-
-} */
-
 .taskCompleted {
  text-decoration-line: line-through;
-
 }
+
+
 </style>
 
 <!--
