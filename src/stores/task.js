@@ -42,9 +42,9 @@ export const useTaskStore = defineStore("tasks", () => {
     });
   };
 
-  const toggleTask = async (id) => {
+  const toggleTask = async (id, boolean) => {
     const { data, error } = await supabase.from("tasks").update({
-      is_complete: true
+      is_complete: boolean
     }).match({id: id});
   };
 

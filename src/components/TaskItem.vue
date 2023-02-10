@@ -2,7 +2,7 @@
 <div class="container">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
     <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
-    <button @click="toggleTask">Mark as Completed</button>
+    <button @click="toggleTask"> {{task.is_complete ? 'not completed yet' : 'done :)'}}</button>
     <button @click="deleteTask">Delete {{task.title}}</button>
     <button @click="inputToggle">Edit {{task.title}}</button>
     <div v-if="showInput">
@@ -78,7 +78,7 @@ const sendData = async () => {
 }
 
 const toggleTask = async() => {
-    await taskStore.toggleTask(props.task.id);
+    await taskStore.toggleTask(props.task.id, !props.task.is_complete);
     emit("updateTask")
     console.log("modifying");
 };

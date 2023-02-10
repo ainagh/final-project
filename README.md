@@ -124,7 +124,7 @@ Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijar
 
 ###### Viernes 10, Febrero 2023
 
-Para el día de hoy, me gustaría poder tener la lógica de la página Home terminada, por lo menos lo básico necesario. Y por supuesto me gustaría poder empezar con el apartado de Profiles.
+Como objetivos para el día de hoy, me gustaría poder tener la lógica de la página Home terminada, por lo menos lo básico necesario. Y por supuesto me gustaría poder empezar con el apartado de Profiles.
 
 - [ ] Acabar el toggle del button "Mark as Completed"
 - [ ] Hacer que salte una alert modal cuando se quiere eliminar una task
