@@ -35,6 +35,7 @@ const props = defineProps({
     task: Object,
 });
 
+/* -------- TOGGLE -------- */
 console.log(props.task);
 
 if (props.task.is_complete === true) {

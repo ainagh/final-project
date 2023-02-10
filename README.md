@@ -128,7 +128,7 @@ Para el día de hoy, me gustaría poder tener la lógica de la página Home term
 
 - [ ] Acabar el toggle del button "Mark as Completed"
 - [ ] Hacer que salte una alert modal cuando se quiere eliminar una task
-- [ ] Empezar la página de Profiles
+- [ ] Empezar la página de Profiles ?
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
