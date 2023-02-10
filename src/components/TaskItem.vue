@@ -5,12 +5,15 @@
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
     <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
     <button @click="toggleTask"> {{task.is_complete ? 'Uncomplete' : 'Completed'}}</button>
+    
     <template  v-if="task.is_complete" >
-        <button disabled  @click="deleteTask">Delete {{task.title}}</button>
-        <button disabled @click="inputToggle">Edit {{task.title}}</button>
+        <!-- <button class="disabled">Delete {{task.title}} </button> --> 
+        <Modal :isComplete="task.is_complete"/>
+        <button class="disabled">Edit {{task.title}}</button>
     </template>
     <template  v-else>
-        <button  @click="deleteTask">Delete {{task.title}}</button>
+        <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
+        <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
         <button @click="inputToggle">Edit {{task.title}}</button>
     </template>
    
@@ -28,7 +31,6 @@
     </div>
         <button @click="sendData">Send Data</button>
     </div>
-    <Modal/>
 </div>
 </template>
 
@@ -62,6 +64,7 @@ function inputToggle(){
 
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
+
 const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
     emit("updateTask")
@@ -78,16 +81,17 @@ const sendData = async () => {
         setTimeout(() => {
         showErrorMessage.value = false;
         }, 5000);
-        //Lanzar un error
-        console.log("Hola pepsicola");
     } else {
-        taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
+        await taskStore.editTask(newTitle.value, newDescription.value, props.task.id);
+        showInput.value = false;
         emit("updateTask");
+        
     }
 }
 
 const toggleTask = async() => {
     await taskStore.toggleTask(props.task.id, !props.task.is_complete);
+    showInput.value = false;
     emit("updateTask")
     console.log("modifying");
 };
@@ -120,6 +124,10 @@ const editMessage = async () => {
 
 .taskCompleted {
  text-decoration-line: line-through;
+}
+
+.disabled {
+    opacity: 50%;
 }
 
 

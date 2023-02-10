@@ -10,7 +10,7 @@
     <h1>Tasks:</h1>
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @updateTask="getTasks"/>
   </div>
-  <Footer/>
+  <Footer />
 </template>
 
 <script setup>

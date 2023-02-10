@@ -1,7 +1,7 @@
 <!-- HTML HERE -->
 <template>
 <footer>
-
+<h1>hello</h1>
 </footer>
 
 </template>
@@ -12,9 +12,9 @@ import { ref, reactive } from "vue";
 <!-- CSS HERE -->
 <style scoped>
 
-body {
+footer {
     width: 100%;
-    height: 30%;
+    height: 30vh;
     background-color: black;
 }
 

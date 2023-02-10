@@ -2,39 +2,54 @@
 <template>
     <!--  --------MODAL-------- -->
 <div class="wrapper">
-    <a href="#demo-modal">Open Demo Modal</a>
+    <router-link v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">Delete(Modal)</router-link>
+    <a v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">Delete(Modal)</a>
 </div>
 <div id="demo-modal" class="modal">
     <div class="modal__content">
-        <h1>CSS Only Modal</h1>
+        <h1>Are you sure you want to delete?</h1>
 
         <p>
-            You can use the :target pseudo-class to create a modals with Zero JavaScript. Enjoy!
+            It's going to be gone forever...
         </p>
         <a href="#" class="modal__close">&times;</a>
+        <button @click="deleteTaskModal">Yes, delete it</button>
     </div>
 </div>
 </template>
 <!-- JS HERE -->
 <script setup>
 import { ref, reactive } from "vue";
+
+const props = defineProps ({
+    isComplete: Boolean,
+});
+
+const emit = defineEmits(["deleteTask"])
+
+const deleteTaskModal = () => {
+    emit ("deleteTask")
+};
+
+
 </script>
 
 <!-- CSS HERE -->
 <style scoped>
 
-.wrapper {
-  height: 100vh;
-  /* This part is important for centering the content */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* End center */
- /*  background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
-  background: linear-gradient(to right, #834d9b, #d04ed6); */
-} 
+.disabled {
+    opacity: 50%;
+}
 
-.wrapper a {
+
+.buttonClass {
+    background-color: red;
+    padding: 10px;
+}
+
+
+
+/* .wrapper a {
   display: inline-block;
   text-decoration: none;
   padding: 15px;
@@ -44,7 +59,7 @@ import { ref, reactive } from "vue";
   color: #585858;
   font-family: 'Roboto', sans-serif;
 }
-
+ */
 .modal {
   visibility: hidden;
   opacity: 0;
