@@ -43,8 +43,7 @@ const deleteTaskModal = () => {
 
 
 .buttonClass {
-    background-color: red;
-    padding: 10px;
+    padding: 5px;
 }
 
 

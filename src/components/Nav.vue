@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-menu">
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
     <router-link to="/">
       Home
@@ -9,6 +9,16 @@
         <li>
           <router-link to="/account">Your Account</router-link>
         </li>
+    </ul>
+    <ul>
+      <li>
+        <router-link to="/timer">Timer</router-link>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <router-link to="/music">Music</router-link>
+      </li>
     </ul>
 
     <div>
@@ -21,6 +31,11 @@
         </li>
       </ul>
     </div>
+    <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
   </nav>
 </template>
 

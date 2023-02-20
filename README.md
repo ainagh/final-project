@@ -130,6 +130,17 @@ Como objetivos para el día de hoy, me gustaría poder tener la lógica de la p�
 - [ ] Hacer que salte una alert modal cuando se quiere eliminar una task
 - [ ] Empezar la página de Profiles ?
 
+#### Day Five
+
+###### Lunes 20, Febrero 2023
+
+Como objetivos para el día de hoy, me gustaría dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También empezar con el responsive de las diferentes páginas.
+
+- [ ] Elección de temática (colores, distribución...)
+- [ ] Responsive
+- [ ] Estilaje CSS en documento style.css
+- [ ] Estilaje en cada uno de los documentos
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

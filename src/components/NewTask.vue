@@ -1,11 +1,15 @@
 <template>
-    <h1>Add a new Task</h1>
+    <h1>&#x1F4CE Add a new Task</h1>
     <div>
         <div class="input-field">
             <input type="text" placeholder="Add a Task Title" v-model="name">
         </div>
+      <!--   <div class="input-field descriptionInput">
+            <input type="text" placeholder="Add a Task Description" v-model="description" > 
+        </div> -->
         <div class="input-field">
-            <input type="text" placeholder="Add a Task Description" v-model="description">
+            <textarea name="descr" placeholder="Add a Task Description..."
+            v-model="description" cols="30" rows="10"></textarea>
         </div>
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
@@ -58,4 +62,11 @@ if(name.value.length < 4 || description.value.length < 4){
 
 </script>
 
-<style></style>
+<style scoped>
+
+.description {
+    width: 20px;
+}
+
+
+</style>
