@@ -126,8 +126,8 @@ Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijar
 
 Como objetivos para el día de hoy, me gustaría poder tener la lógica de la página Home terminada, por lo menos lo básico necesario. Y por supuesto me gustaría poder empezar con el apartado de Profiles.
 
-- [ ] Acabar el toggle del button "Mark as Completed"
-- [ ] Hacer que salte una alert modal cuando se quiere eliminar una task
+- [x] Acabar el toggle del button "Mark as Completed"
+- [x] Hacer que salte una alert modal cuando se quiere eliminar una task
 - [ ] Empezar la página de Profiles ?
 
 #### Day Five
