@@ -1,14 +1,12 @@
 <template>
   <nav class="nav-menu">
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
-      Home
-    </router-link>
+    <router-link to="/"> Home </router-link>
 
     <ul>
-        <li>
-          <router-link to="/account">Your Account</router-link>
-        </li>
+      <li>
+        <router-link to="/account">Your Account</router-link>
+      </li>
     </ul>
     <ul>
       <li>
@@ -31,20 +29,47 @@
         </li>
       </ul>
     </div>
-    <div class="hamburguer">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
   </nav>
+  <div class="hamburguer" @click="miFuncion">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+ <!--  TEST --> 
+ <div class="container-fluid" id="app">
+  <nav class="row navbar">
+   
+    <!-- <div class="col-xs-6">
+      <div class="hamburger-wrap">
+        <button class="hamburger" type="button" @click="miFuncion">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__middle"></span>
+          <span class="icon-bar hamburger__line"></span>          
+        </button>
+      </div>
+    </div> -->
+  </nav>
+  <div class="row dropdown" :class="{ 'dropdown-after' : menuOpen }">
+    <ul class="navlist">
+      <li class="navlistitem">
+        <a href="#">home</a>
+      </li>
+      <li class="navlistitem">
+        <a href="#">about</a>
+      </li>
+      <li class="navlistitem">
+        <a href="#">contact</a>
+      </li>
+    </ul>
+  </div>
+</div>
 </template>
 
 <script setup>
 // import PersonalRouter from "./PersonalRouter.vue";
 import { useUserStore } from "../stores/user";
-import { computed } from "vue";
 import { useRouter } from "vue-router";
-import { ref } from 'vue';
+import { ref, reactive, computed } from "vue";
 
 //constant to save a variable that will hold the use router method
 const route = "/";
@@ -61,34 +86,123 @@ const userEmail = getUser.email;
 const redirect = useRouter();
 
 const signOut = async () => {
-  try{
+  try {
     // call the user store and send the users info to backend to signOut
     useUserStore().signOut();
     // then redirect user to the auth/login
-    redirect.push({ path: "/auth/login"})
+    redirect.push({ path: "/auth/login" });
   } catch (error) {}
 };
 
-</script>
+/* const hamburguer = document.querySelector(".hamburguer");
+const navMenu = document.querySelector(".nav-menu"); */
 
-<style>
-.navbar-img {
-  width: 90px;
+/* hamburguer.addEventListener("click", () => {
+    hamburguer.classList.toggle("active");
+    navMenu.classList.toggle("active");
+
+}) */
+/* 
+
+
+console.log("Simple Push"); */
+
+
+// Hamburguer Menu Logic 
+const menuOpen = ref(false); 
+
+const miFuncion = () => {
+  console.log("me ha clickadoo");
+  menuOpen.value = !menuOpen.value
+  console.log(menuOpen.value);
+};
+</script> 
+
+<style scoped>
+.navbar {
+  height: 50px;
+  background-color: Lightgrey;
+  display: flex;
+  border-radius: 0px;
 }
 
-nav {
-  background-color: lightgray;
+.logo1 {
+  color: red;
+}
+
+.logo2 {
+  color: grey;
+}
+
+.logo,
+.hamburger-wrap {
+  width: 100px;
+  height: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
   align-items: center;
 }
 
-nav ul {
+.hamburger-wrap {
+  float: right;
+  justify-content: flex-end;
+}
+
+.hamburger {
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  border-radius: 4px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger__line,
+.hamburger__middle {
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.hamburger__middle {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.dropdown {
+  margin-top: -20px;
+  height: 0px;
+  background-color: lightgreen;
+  transition: height 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dropdown-after {
+  height: calc(100vh - 50px);
+  transition: height 0.2s ease;
+}
+
+.navlist {
   list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.navlistitem {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.navlistitem a {
+  color: #FFFFFF;
 }
 </style>
