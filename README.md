@@ -134,12 +134,12 @@ Como objetivos para el día de hoy, me gustaría poder tener la lógica de la p�
 
 ###### Lunes 20, Febrero 2023
 
-Como objetivos para el día de hoy, me gustaría dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También empezar con el responsive de las diferentes páginas.
+Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer, y después dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También buscar los errores del hamburger menu.
 
 - [ ] Elección de temática (colores, distribución...)
-- [ ] Responsive
+- [ ] Timer
+- [ ] Responsive (Hamburger)
 - [ ] Estilaje CSS en documento style.css
-- [ ] Estilaje en cada uno de los documentos
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
