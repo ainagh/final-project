@@ -68,5 +68,4 @@ if(name.value.length < 4 || description.value.length < 4){
     width: 20px;
 }
 
-
 </style>

@@ -1,67 +1,54 @@
 <template>
   <nav class="nav-menu">
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/"> Home </router-link>
-
-    <ul>
-      <li>
+    <router-link to="/"> Tasks App </router-link>
+    <ul class="nav-ul">
+      <!-- <li>
         <router-link to="/account">Your Account</router-link>
-      </li>
-    </ul>
-    <ul>
+      </li> -->
       <li>
         <router-link to="/timer">Timer</router-link>
       </li>
-    </ul>
-    <ul>
       <li>
-        <router-link to="/music">Music</router-link>
+        <router-link to="/music">Background Music</router-link>
       </li>
     </ul>
-
-    <div>
       <ul>
-        <li class="log-out-welcome">
+       <!--  <li class="log-out-welcome">
           <p>Welcome, user</p>
-        </li>
+        </li> -->
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="logout-button">Log out</button>
         </li>
       </ul>
-    </div>
   </nav>
-  <div class="hamburguer" @click="miFuncion">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
- <!--  TEST --> 
- <div class="container-fluid" id="app">
-<!--   <nav class="row navbar">
-     <div class="col-xs-6">
-      <div class="hamburger-wrap">
-        <button class="hamburger" type="button" @click="miFuncion">
-          <span class="hamburger__line"></span>
-          <span class="hamburger__middle"></span>
-          <span class="icon-bar hamburger__line"></span>          
-        </button>
+  <div class="all-hamburguer">
+    <div class="hamburguer-wrap">
+      <div class="hamburguer" @click="miFuncion">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
       </div>
-    </div> 
-  </nav> -->
-  <div class="row dropdown" :class="{ 'dropdown-after' : menuOpen }">
-    <ul class="navlist">
+   </div>
+  <div class="container-fluid" id="app">
+    <div class="row dropdown" :class="{ 'dropdown-after' : menuOpen }">
+     <ul class="navlist">
       <li class="navlistitem">
-        <a href="#">home</a>
+        <router-link to="/">Tasks App</router-link>
       </li>
       <li class="navlistitem">
-        <a href="#">about</a>
+        <router-link to="/timer">Timer</router-link>
       </li>
       <li class="navlistitem">
-        <a href="#">contact</a>
+        <router-link to="/music">Background Music</router-link>
       </li>
+      <li class="logout-hamburguer">
+          <button @click="signOut" class="logout-button">Log out</button>
+        </li>
     </ul>
+    </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script setup>
@@ -119,79 +106,5 @@ const miFuncion = () => {
 
 <!-- --------------STYLE CSS---------------- -->
 <style scoped>
-.navbar {
-  height: 50px;
-  background-color: #F3DBE0;
-  display: flex;
-  border-radius: 0px;
-}
 
-.hamburguer-wrap {
-  width: 100px;
-  height: 50%;
-  margin-left: 50px;
-  margin-right: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.hamburguer-wrap {
-  float: right;
-  justify-content: flex-end;
-}
-
-.hamburguer {
-  width: 45px;
-  height: 45px;
-}
-
-/* .hamburguer:focus {
-  outline: none;
-} */
-
-/* .hamburguer__line,
-.hamburguer__middle {
-  display: block;
-  width: 30px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: #FFFFFF;
-  margin-top: 7px;
-  margin-bottom: 7px;
-} */
-
-/* .hamburguer__middle {
-  width: 20px;
-  margin-left: 10px;
-} */
-
-.dropdown {
-  margin-top: 20px;
-  height: 0px;
-  background-color: #F3DBE0;
-  transition: height 0.2s ease;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  overflow: hidden;
-}
-
-.dropdown-after {
-  height: calc(30vh - 10px);
-  transition: height 0.2s ease;
-}
-
-.navlist {
-  list-style: none;
-}
-
-.navlistitem {
-  text-transform: uppercase;
-  text-align: center;
-  padding: 20px;
-}
-
-.navlistitem a {
-  color: black;
-}
 </style>

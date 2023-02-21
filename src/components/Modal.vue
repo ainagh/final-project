@@ -2,8 +2,8 @@
 <template>
     <!--  --------MODAL-------- -->
 <div class="wrapper">
-    <router-link v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">Delete(Modal)</router-link>
-    <a v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">Delete(Modal)</a>
+    <router-link v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">&#x1F5D1</router-link>
+    <a v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">&#x1F5D1</a>
 </div>
 <div id="demo-modal" class="modal">
     <div class="modal__content">

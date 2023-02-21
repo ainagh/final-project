@@ -9,12 +9,12 @@
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
         <Modal :isComplete="task.is_complete"/>
-        <button class="disabled">Edit {{task.title}}</button>
+        <button class="disabled">&#x1F4DD {{task.title}}</button>
     </template>
     <template  v-else>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
         <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
-        <button @click="inputToggle">Edit {{task.title}}</button>
+        <button @click="inputToggle">&#x1F4DD {{task.title}}</button>
     </template>
    
     <div v-if="showInput">
