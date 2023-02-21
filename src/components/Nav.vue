@@ -37,9 +37,8 @@
   </div>
  <!--  TEST --> 
  <div class="container-fluid" id="app">
-  <nav class="row navbar">
-   
-    <!-- <div class="col-xs-6">
+<!--   <nav class="row navbar">
+     <div class="col-xs-6">
       <div class="hamburger-wrap">
         <button class="hamburger" type="button" @click="miFuncion">
           <span class="hamburger__line"></span>
@@ -47,8 +46,8 @@
           <span class="icon-bar hamburger__line"></span>          
         </button>
       </div>
-    </div> -->
-  </nav>
+    </div> 
+  </nav> -->
   <div class="row dropdown" :class="{ 'dropdown-after' : menuOpen }">
     <ul class="navlist">
       <li class="navlistitem">
@@ -118,50 +117,40 @@ const miFuncion = () => {
 };
 </script> 
 
+<!-- --------------STYLE CSS---------------- -->
 <style scoped>
 .navbar {
   height: 50px;
-  background-color: Lightgrey;
+  background-color: #F3DBE0;
   display: flex;
   border-radius: 0px;
 }
 
-.logo1 {
-  color: red;
-}
-
-.logo2 {
-  color: grey;
-}
-
-.logo,
-.hamburger-wrap {
+.hamburguer-wrap {
   width: 100px;
-  height: 100%;
+  height: 50%;
   margin-left: 50px;
   margin-right: 50px;
   display: flex;
   align-items: center;
 }
 
-.hamburger-wrap {
+.hamburguer-wrap {
   float: right;
   justify-content: flex-end;
 }
 
-.hamburger {
+.hamburguer {
   width: 45px;
   height: 45px;
-  background-color: black;
-  border-radius: 4px;
 }
 
-.hamburger:focus {
+/* .hamburguer:focus {
   outline: none;
-}
+} */
 
-.hamburger__line,
-.hamburger__middle {
+/* .hamburguer__line,
+.hamburguer__middle {
   display: block;
   width: 30px;
   height: 2px;
@@ -169,26 +158,26 @@ const miFuncion = () => {
   background-color: #FFFFFF;
   margin-top: 7px;
   margin-bottom: 7px;
-}
+} */
 
-.hamburger__middle {
+/* .hamburguer__middle {
   width: 20px;
   margin-left: 10px;
-}
+} */
 
 .dropdown {
-  margin-top: -20px;
+  margin-top: 20px;
   height: 0px;
-  background-color: lightgreen;
+  background-color: #F3DBE0;
   transition: height 0.2s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
   overflow: hidden;
 }
 
 .dropdown-after {
-  height: calc(100vh - 50px);
+  height: calc(30vh - 10px);
   transition: height 0.2s ease;
 }
 
@@ -203,6 +192,6 @@ const miFuncion = () => {
 }
 
 .navlistitem a {
-  color: #FFFFFF;
+  color: black;
 }
 </style>

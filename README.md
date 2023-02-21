@@ -141,6 +141,14 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 - [ ] Responsive (Hamburger)
 - [ ] Estilaje CSS en documento style.css
 
+###### Martes 21, Febrero 2023
+
+Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer, y después dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También buscar los errores del hamburger menu.
+
+- [ ] Responsive (Hamburger)
+- [ ] Acabar lógica del Timer
+- [ ] Estilaje CSS en documento style.css
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

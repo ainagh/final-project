@@ -108,7 +108,7 @@ import Nav from '../components/Nav.vue';
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 54px;
     margin-right: 10px;
 }
 .title {

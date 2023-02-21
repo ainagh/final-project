@@ -18,10 +18,10 @@
 
 /*  ------------ HAMBURGUER ------------- */
 
-.hamburguer {
+/* .hamburguer {
   display: none;
   cursor: pointer;
-}
+} */
 
 .bar {
   display: block;
@@ -31,6 +31,10 @@
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #292e47;
+}
+
+.nav-menu {
+  flex-direction: row;
 }
 
 /* SignIn Component */
@@ -53,7 +57,7 @@
     display: block;
   }
 
-  .hamburguer.active .bar:nth-child(2) {
+  /* .hamburguer.active .bar:nth-child(2) {
     opacity: 0;
   }
 
@@ -64,23 +68,21 @@
   .hamburguer.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
+ */
   .nav-menu {
     position: absolute;
-    top: -200%;
-    /*  top: 80px; */
+    top: -100%;
     gap: 0;
     flex-direction: column;
     background-color: #c8c8c8;
-    width: 100%;
+    width: 50%;
     text-align: left;
     transition: top 0.5s;
     left: 0%;
   }
 
-
   .nav-menu.active {
-    top: 80px;
+    top: 40px;
   }
 
 }
