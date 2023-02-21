@@ -1,7 +1,9 @@
 <!-- HTML HERE -->
 <template>
 <footer>
-<h1>hello</h1>
+<div class="footer-text">
+    <h3>© tasks &#x2601. created with love by: Aina &#x2764</h3>
+</div>
 </footer>
 
 </template>
@@ -15,8 +17,16 @@ import { ref, reactive } from "vue";
 footer {
     width: 100%;
     height: 30vh;
-    background-color: black;
+    background-color: #53413C;
+    color: #FAF0F2;
 }
 
+.footer-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 

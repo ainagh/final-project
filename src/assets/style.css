@@ -115,7 +115,7 @@ body {
   }
 
   .dropdown-after {
-    height: calc(30vh - 10px);
+    height: calc(40vh - 10px);
     transition: height 0.2s ease;
     align-items: center;
     justify-content: center;
