@@ -3,12 +3,12 @@
   <template>
 
   <div class="container">
-    <h1>&#x2601</h1>
+    <h1 class="header-icon">&#x2601</h1>
     <h3 class="header-title">Welcome to xxxx</h3>
     <p class="header-subtitle">Come have a peaceful study session</p>
 
    <div class="sign-in-form">
-    <form @submit.prevent="signIn">
+    <form @submit.prevent="signIn" class="sign-in-form">
     <input type="email" class="cloud-input"
             placeholder="example@gmail.com"
             id="email"
@@ -20,8 +20,10 @@
             id="password"
             v-model="password"
             required/> <br>
+   <div class="sign-in-container">
     <button class="cloud-button" type="submit">Sign In</button>
-    <p>Don't have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+  </div>
+    <p class="sign-up">First time here? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
   </form>
   <p v-if="aviso">Email or Password not correct</p>
   </div>
@@ -70,21 +72,43 @@ const signIn = async () => {
 <style scoped>
 
 .container {
-  margin-top: 10%;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
+.header-icon {
+ font-size: 100px;
+ margin-bottom: 0;
+}
+.header-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+}
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+}
 .cloud-button {
+  width: 30%;
   background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border-radius: 50px;
   border: none;
-  color: #333;
   font-size: 16px;
+  margin-top: 15px;
   padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
   cursor: pointer;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
@@ -94,7 +118,6 @@ const signIn = async () => {
   background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
-
 .cloud-input {
   background: #f8f8f8;
   border: none;
@@ -105,9 +128,16 @@ const signIn = async () => {
   margin: 10px;
   width: 300px;
 }
-
 .cloud-input:focus {
   outline: none;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
+.sign-up {
+ padding: 40px;
+ margin-bottom: 200px;
+}
+
+
+
 </style>
+
