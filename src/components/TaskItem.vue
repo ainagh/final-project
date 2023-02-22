@@ -104,8 +104,6 @@ const editMessage = async () => {
         setTimeout(() => {
         showErrorMessage.value = false;
         }, 5000);
-        //Lanzar un error
-        console.log("Hola pepsicola");
     }
 }
 

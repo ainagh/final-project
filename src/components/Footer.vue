@@ -17,7 +17,7 @@ import { ref, reactive } from "vue";
 footer {
     width: 100%;
     height: 30vh;
-    background-color: #53413C;
+    background-color: #8E6E67;
     color: #FAF0F2;
 }
 

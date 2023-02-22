@@ -23,7 +23,7 @@
    <div class="sign-in-container">
     <button class="cloud-button" type="submit">Sign In</button>
   </div>
-    <p class="sign-up">First time here? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+    <p class="sign-up">First time here?  <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/> </p>
   </form>
   <p v-if="aviso">Email or Password not correct</p>
   </div>
@@ -113,7 +113,6 @@ const signIn = async () => {
   cursor: pointer;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
-
 .cloud-button:hover {
   background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
@@ -135,6 +134,17 @@ const signIn = async () => {
 .sign-up {
  padding: 40px;
  margin-bottom: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+
+p a {
+  color: #643F55;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 

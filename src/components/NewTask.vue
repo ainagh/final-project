@@ -1,21 +1,23 @@
 <template>
-    <h1>&#x1F4CE Add a new Task</h1>
-    <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title" v-model="name">
+<div class="add-tasks-container">
+        <h1 class="home-title">Add a new Task</h1>
+    <div class="add-task-form">
+        <div>
+            <input type="text" class="input-field" placeholder="Add a Task Title" v-model="name">
         </div>
-      <!--   <div class="input-field descriptionInput">
-            <input type="text" placeholder="Add a Task Description" v-model="description" > 
-        </div> -->
-        <div class="input-field">
-            <textarea name="descr" placeholder="Add a Task Description..."
+        <div>
+            <textarea name="descr" 
+            class="input-field" placeholder="Add a Task Description..."
             v-model="description" cols="30" rows="10"></textarea>
         </div>
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
         </div>
-        <button @click="addTask" class="button">Add</button>
+        <div class="add-button-container">
+        <button @click="addTask" class="add-button">Add</button>
+        </div>
     </div>
+</div>
 </template>
 
 <script setup>
@@ -41,7 +43,7 @@ if(name.value.length < 4 || description.value.length < 4){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = "The task title or description is empty or just too short. (That's what she said)";
+    errorMessage.value = "Missing title and description or too short";
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);
@@ -68,4 +70,52 @@ if(name.value.length < 4 || description.value.length < 4){
     width: 20px;
 }
 
+.add-tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%
+
+}
+.home-title {
+ font-size: 40px;
+ margin-bottom: 0;
+}
+
+.input-field {
+  background: #f8f8f8;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+.add-button {
+  width: 30%;
+  background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.add-button-container {
+    display: flex;
+    justify-content: center;
+}
+.add-button:hover {
+  background: linear-gradient(45deg, #f5cfe8, #efe0ea, #ffffff);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.add-task-form {
+    margin: 40px;
+}
 </style>

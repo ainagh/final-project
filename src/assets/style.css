@@ -42,20 +42,34 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background-color: #8E6E67;
+  padding: 10px 20px 10px 20px;
 }
+
 
 .nav-menu li {
   list-style: none;
+
 }
 
 .nav-ul {
   display: flex;
   flex-direction: row;
-  gap: 200px;
+  gap: 100px;
+
 }
 
 .dropdown {
   display: none;
+}
+
+nav a {
+  color: #FAF0F2;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 
@@ -89,6 +103,7 @@ body {
     text-align: left;
     transition: top 0.5s;
     left: 0%;
+    padding: 5px 20px 5px 20px;
   }
 
   .nav-menu.active {
@@ -101,7 +116,6 @@ body {
     justify-content: flex-end;
     position: fixed;
     top: 0;
-
   }
 
   .dropdown {
