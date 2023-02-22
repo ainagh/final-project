@@ -130,16 +130,18 @@ nav a {
     margin-top: 45px;
     height: 0px;
     background-color: whitesmoke;
-    transition: height 0.2s ease;
+    transition: height 0.4s ease;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
 
   .dropdown-after {
     height: calc(50vh - 10px);
-    transition: height 0.2s ease;
+    transition: height 0.4s ease;
     align-items: center;
     justify-content: center;
     opacity: 0.95;

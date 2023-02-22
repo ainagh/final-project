@@ -8,7 +8,6 @@
 <div id="demo-modal" class="modal">
     <div class="modal__content">
         <h1>Are you sure you want to delete?</h1>
-
         <p>
             It's going to be gone forever...
         </p>
@@ -68,30 +67,24 @@ const deleteTaskModal = () => {
   color: black;
 }
 
-/* .wrapper a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 3px;
-  text-transform: uppercase;
-  color: #585858;
-  font-family: 'Roboto', sans-serif;
+#demo-modal {
+  height: 100%;
 }
- */
 .modal {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(77, 77, 77, .7);
   transition: all .4s;
+  font-size: 16px;
 }
 
 .modal:target {

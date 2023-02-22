@@ -38,6 +38,7 @@ getTasks();
 h1 {
   font-size: 40px;
   text-align: center;
+  margin-bottom: 0;
 }
 .all-tasks {
   display: flex;

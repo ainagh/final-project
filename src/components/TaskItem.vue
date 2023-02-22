@@ -1,9 +1,8 @@
 <template>
 
 <div class="parent-container">
-    <p class="task-alert">{{task.is_complete ? 'done!' : 'not completed yet'}}</p>
-  <!--   <p :class="">{{  }}</p> -->
-  <div class="cloud-container">
+    <!-- <p class="task-alert">{{task.is_complete ? 'done!' : 'not completed yet'}}</p> -->
+  <div :class="props.task.is_complete ? 'cloud-rosa':'cloud-container'">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
   </div>
     <h4 class="description-container" :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
@@ -14,7 +13,7 @@
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
         <Modal :isComplete="task.is_complete"/>
-        <button class="disabled edit-button">&#x1F4DD</button>
+        <button class="disabled edit-button">✏️</button>
     </template>
     <template  v-else>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
@@ -128,21 +127,15 @@ const editMessage = async () => {
 
 <style>
 
-.taskCompleted {
+/* .taskCompleted {
  text-decoration-line: line-through;
-}
+ text-decoration-style: wavy;
+} */
 
 .disabled {
     opacity: 50%;
 }
 
-.task-alert {
-    text-orientation: upright;
-    transform: rotate(-60deg);
-    display: inline-block;
-    position: relative;
-    top: 50px;
-}
 .parent-container {
   width: 340px;
   padding: 20px;
@@ -155,6 +148,19 @@ const editMessage = async () => {
 
 .cloud-container {
     background-image: url('../../public/cloud2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloud-rosa {
+    background-image: url(../../public/cloud3.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -188,15 +194,6 @@ const editMessage = async () => {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.task-alert {
-   display: inline-block;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 140px;
-    line-height: 1.5;
 }
 
 .complete-button, .edit-button, .send-button {
