@@ -18,7 +18,6 @@ body {
   /* background-color: #F3DBE0; */
   background: linear-gradient(110deg, #ffffff, #FAF0F2, #F3DBE0, #F0D1D8);
   margin: 0;
-
 }
 
 /*  ------------ HAMBURGUER ------------- */
@@ -93,9 +92,15 @@ nav a {
 @media (max-width: 766px) {
 
   /*  ------------ HAMBURGUER RESPONSIVE ------------- */
+  body {
+    background: linear-gradient(110deg, #F3DBE0, #FAF0F2, #ffffff);
+    margin: 0;
+  }
 
   .hamburguer {
     display: block;
+    margin-top: 3%;
+    margin-right: 3%;
   }
 
   .nav-menu {
