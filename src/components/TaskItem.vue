@@ -12,23 +12,25 @@
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
         <Modal :isComplete="task.is_complete"/>
-        <button class="disabled">&#x1F4DD edit {{task.title}}</button>
+        <button class="disabled edit-button">&#x1F4DD edit</button>
     </template>
     <template  v-else>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
         <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
-        <button @click="inputToggle">&#x1F4DD edit {{task.title}}</button> 
+        <button class="edit-button" @click="inputToggle">&#x1F4DD Edit task </button> 
     </template>
 </div>
    
     <div v-if="showInput">
         <div>
-            <p>Insert title</p>
+            <!-- <p>Insert title</p> -->
             <input type="text" v-model="newTitle" placeholder="Insert title...">
         </div>
         <div>
-            <p>Insert Description</p>
-            <input type="text" v-model="newDescription" placeholder="Insert description...">
+            <!-- <p>Insert Description</p> -->
+            <textarea name="descr" 
+            class="input-field" placeholder="Insert description..."
+            v-model="newDescription" cols="30" rows="5"></textarea>
         </div>
         <div class="absolutePosition" v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
@@ -82,7 +84,7 @@ const sendData = async () => {
     if(newTitle.value.length < 4 || newDescription.value.length < 4){
         
         showErrorMessage.value = true;
-        errorMessage.value = "The task title or description is empty or just too short. (That's what she said)";
+        errorMessage.value = "Missing title and description or way too short :(";
         setTimeout(() => {
         showErrorMessage.value = false;
         }, 5000);
@@ -135,7 +137,6 @@ const editMessage = async () => {
 
 .parent-container {
   width: 340px;
-  height: 300px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -143,6 +144,24 @@ const editMessage = async () => {
 }
 
 .cloud-container {
+    background-image: url('../../public/cloud.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloud-container h3, .cloud-container h4 {
+    margin: 0;
+    width: 90%;
+}
+
+/* .cloud-container {
   width: 300px;
   height: 200px;
   background: linear-gradient(45deg, #ffffff, #f1f1f1);
@@ -180,7 +199,7 @@ const editMessage = async () => {
 
 .cloud-container:hover {
     background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
-}
+} */
 
 .task-buttons {
     display: flex;
@@ -197,6 +216,24 @@ const editMessage = async () => {
     -webkit-text-fill-color: transparent;
     width: 140px;
     line-height: 1.5;
+}
+
+.complete-button, .edit-button {
+  width: 45%;
+  background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.complete-button:hover, .edit-button:hover {
+  background: linear-gradient(45deg, #f5cfe8, #efe0ea, #ffffff);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* .cloud-container {
