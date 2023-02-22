@@ -29,9 +29,9 @@ body {
 
 .bar {
   display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
+  width: 40px;
+  height: 3.5px;
+  margin: 9px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #292e47;
@@ -50,14 +50,12 @@ body {
 
 .nav-menu li {
   list-style: none;
-
 }
 
 .nav-ul {
   display: flex;
   flex-direction: row;
   gap: 100px;
-
 }
 
 .dropdown {
@@ -99,8 +97,8 @@ nav a {
 
   .hamburguer {
     display: block;
-    margin-top: 3%;
-    margin-right: 3%;
+    margin-top: 4%;
+    margin-right: 5%;
   }
 
   .nav-menu {
@@ -129,9 +127,9 @@ nav a {
   }
 
   .dropdown {
-    margin-top: 20px;
+    margin-top: 45px;
     height: 0px;
-    background-color: white;
+    background-color: whitesmoke;
     transition: height 0.2s ease;
     display: flex;
     flex-direction: row;
@@ -140,11 +138,11 @@ nav a {
   }
 
   .dropdown-after {
-    height: calc(40vh - 10px);
+    height: calc(50vh - 10px);
     transition: height 0.2s ease;
     align-items: center;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 0.95;
   }
 
   .navlist {

@@ -99,6 +99,7 @@ if(name.value.length < 4 || description.value.length < 4){
   border-radius: 50px;
   border: none;
   font-size: 16px;
+  font-weight: 600;
   margin-top: 15px;
   padding: 10px 20px;
   display: inline-block;

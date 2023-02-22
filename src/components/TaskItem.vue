@@ -22,22 +22,21 @@
         <button class="edit-button" @click="inputToggle">✏️ </button> 
     </template>
 </div>
-   
-    <div v-if="showInput">
+    <div class="edit-container" v-if="showInput">
         <div>
             <!-- <p>Insert title</p> -->
-            <input type="text" v-model="newTitle" placeholder="Insert title...">
+            <input class="input-field" type="text" v-model="newTitle" placeholder="Insert new title...">
         </div>
         <div>
             <!-- <p>Insert Description</p> -->
             <textarea name="descr" 
-            class="input-field" placeholder="Insert description..."
-            v-model="newDescription" cols="30" rows="5"></textarea>
+            class="input-field" placeholder="Insert new description..."
+            v-model="newDescription" cols="20" rows="3"></textarea>
         </div>
         <div class="absolutePosition" v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
-    </div>
-        <button @click="sendData">Send Data</button>
+        </div>
+        <button class="send-button" @click="sendData">Send Data</button>
     </div>
   
 </div>
@@ -174,7 +173,7 @@ const editMessage = async () => {
 .description-container {
   background-color: #f1f1f1;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 300;
   margin-top: 15px;
@@ -183,10 +182,6 @@ const editMessage = async () => {
   cursor: pointer;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); 
 }
-
-/* .cloud-container:hover {
-    background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
-} */
 
 .task-buttons {
     display: flex;
@@ -204,7 +199,7 @@ const editMessage = async () => {
     line-height: 1.5;
 }
 
-.complete-button, .edit-button {
+.complete-button, .edit-button, .send-button {
   border-radius: 50px;
   background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border: none;
@@ -226,7 +221,29 @@ const editMessage = async () => {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
+.input-field {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
 
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-button {
+    font-size: 14px;
+    font-weight: 600;
+}
 </style>
 
 <!--

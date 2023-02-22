@@ -107,4 +107,27 @@ const miFuncion = () => {
 <!-- --------------STYLE CSS---------------- -->
 <style scoped>
 
+.navlist a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logout-button {
+  border-radius: 50px;
+  background: linear-gradient(45deg, #f5cfe8, #efe0ea, #ffffff);
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button:hover {
+  background: linear-gradient(45deg, #ffffff,  #efe0ea, #f5cfe8);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
 </style>
