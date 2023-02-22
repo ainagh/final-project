@@ -1,23 +1,25 @@
 <template>
+
 <div class="parent-container">
     <p class="task-alert">{{task.is_complete ? 'done!' : 'not completed yet'}}</p>
   <!--   <p :class="">{{  }}</p> -->
   <div class="cloud-container">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
-    <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
-</div>
+  </div>
+    <h4 class="description-container" :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
+
   <div class="task-buttons">
-    <button class="complete-button" @click="toggleTask"> {{task.is_complete ? 'Uncomplete' : 'Completed'}}</button>
+    <button class="complete-button" @click="toggleTask"> {{task.is_complete ? '&#x274C' : '&#x2714'}}</button>
     
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
         <Modal :isComplete="task.is_complete"/>
-        <button class="disabled edit-button">&#x1F4DD edit</button>
+        <button class="disabled edit-button">&#x1F4DD</button>
     </template>
     <template  v-else>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
         <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
-        <button class="edit-button" @click="inputToggle">&#x1F4DD Edit task </button> 
+        <button class="edit-button" @click="inputToggle">✏️ </button> 
     </template>
 </div>
    
@@ -135,20 +137,29 @@ const editMessage = async () => {
     opacity: 50%;
 }
 
+.task-alert {
+    text-orientation: upright;
+    transform: rotate(-60deg);
+    display: inline-block;
+    position: relative;
+    top: 50px;
+}
 .parent-container {
   width: 340px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cloud-container {
-    background-image: url('../../public/cloud.png');
+    background-image: url('../../public/cloud2.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-height: 300px;
+    min-height: 200px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -156,48 +167,24 @@ const editMessage = async () => {
     justify-content: center;
 }
 
-.cloud-container h3, .cloud-container h4 {
+.cloud-container h3 {
     margin: 0;
-    width: 90%;
 }
 
-/* .cloud-container {
-  width: 300px;
-  height: 200px;
-  background: linear-gradient(45deg, #ffffff, #f1f1f1);
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.description-container {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); 
 }
 
-.cloud-container:before,
-.cloud-container:after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.cloud-container:before {
-  width: 150px;
-  height: 150px;
-  top: -70px;
-  left: -50px;
-}
-
-.cloud-container:after {
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  right: -30px;
-}
-
-.cloud-container:hover {
+/* .cloud-container:hover {
     background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
 } */
 
@@ -209,7 +196,6 @@ const editMessage = async () => {
 }
 
 .task-alert {
-   /*  text-align: center; */
    display: inline-block;
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
@@ -219,11 +205,10 @@ const editMessage = async () => {
 }
 
 .complete-button, .edit-button {
-  width: 45%;
-  background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border-radius: 50px;
+  background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border: none;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 15px;
   padding: 10px 20px;
   display: inline-block;
@@ -231,47 +216,16 @@ const editMessage = async () => {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-.complete-button:hover, .edit-button:hover {
-  background: linear-gradient(45deg, #f5cfe8, #efe0ea, #ffffff);
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+.edit-button:hover {
+  background: linear-gradient(45deg, #ebcbf3, #ede0ef, #ffffff);
+  
 }
 
-/* .cloud-container {
-  width: 300px;
-  height: 200px;
-  background: linear-gradient(45deg, #ffffff, #f1f1f1);
-  border-radius: 10%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
+.complete-button:hover {
+    background: linear-gradient(45deg, #b5eacb, #d7ece0, #ffffff);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
- */
-
-/* .cloud-container:before,
-.cloud-container:after {
-  content: '';
-  position: absolute;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.cloud-container:before {
-  width: 150px;
-  height: 150px;
-  top: -70px;
-  left: -50px;
-}
-
-.cloud-container:after {
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  right: -30px;
-}
- */
 
 </style>
 

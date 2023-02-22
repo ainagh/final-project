@@ -73,6 +73,10 @@ nav a {
   padding-left: 10px;
 }
 
+.task-buttons {
+  gap: 20px;
+  font-size: 40px;
+}
 
 /* SignIn Component */
 

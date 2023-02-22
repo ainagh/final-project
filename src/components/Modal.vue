@@ -2,8 +2,8 @@
 <template>
     <!--  --------MODAL-------- -->
 <div class="wrapper">
-    <router-link v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">&#x1F5D1</router-link>
-    <a class="delete-button" v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">&#x26A1 Delete</a>
+    <router-link class="delete-button common-button" v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">&#x1F5D1</router-link>
+    <a class="delete-button" v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">&#x1F5D1</a>
 </div>
 <div id="demo-modal" class="modal">
     <div class="modal__content">
@@ -47,11 +47,10 @@ const deleteTaskModal = () => {
 }
 
 .delete-button {
-  width: 45%;
   background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border-radius: 50px;
   border: none;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 15px;
   padding: 10px 20px;
   display: inline-block;
@@ -61,7 +60,7 @@ const deleteTaskModal = () => {
 }
 
 .delete-button:hover {
-  background: linear-gradient(45deg, #f5cfe8, #efe0ea, #ffffff);
+  background: linear-gradient(45deg, #f18e8e, #f8d0d0, #ffffff);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
 

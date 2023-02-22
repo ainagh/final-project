@@ -3,7 +3,9 @@
     <Nav />
     <NewTask @addTitle="getTasks"/>
     <h1>&#x1F9F8 Tasks:</h1>
+    <div class="all-tasks">
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" @updateTask="getTasks"/>
+  </div>
   </div>
   <Footer />
 </template>
@@ -31,7 +33,15 @@ getTasks();
 
 </script>
 
-<style></style>
+<style scoped>
+
+.all-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+</style>
 
 <!-- 
 **Hints**
