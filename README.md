@@ -99,7 +99,7 @@ El objetivo principal del primer día es, por supuesto, crear y conectar el proy
 
 #### Day Two
 
-###### Miercoles 08, Febrero 2023
+###### Miércoles 08, Febrero 2023
 
 Como objetivos para el día de hoy, estaría en primer lugar acabar de entender el código, de este modo me será mucho más fácil saber de dónde proviene cada cosa. También me gustaría empezar con la página del Auth y todo lo que incluye (Sign In, Sign Up, Sign Out). 
 
@@ -141,13 +141,25 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 - [ ] Responsive (Hamburger)
 - [ ] Estilaje CSS en documento style.css
 
+#### Day Six
+
 ###### Martes 21, Febrero 2023
 
 Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer, y después dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También buscar los errores del hamburger menu.
 
-- [ ] Responsive (Hamburger)
+- [x] Responsive (Hamburger)
 - [ ] Acabar lógica del Timer
-- [ ] Estilaje CSS en documento style.css
+- [x] Estilaje CSS en documento style.css
+
+#### Day Seven
+
+###### Miércoles 22, Febrero 2023
+
+Para el día de hoy tengo pensado centrarme en el style del Home en general: al añadir las tasks, el modal... También ir trabajando en el responsive de la misma página.
+
+- [ ] Style CSS de Home
+- [ ] Responsive del Home
+- [ ] Añadir iframe a Background Music
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
