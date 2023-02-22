@@ -43,7 +43,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #8E6E67;
+  background: linear-gradient(45deg, #858287, #666468, #3f3d40);
+  opacity: 0.7;
   padding: 10px 20px 10px 20px;
 }
 

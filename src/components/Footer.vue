@@ -17,7 +17,8 @@ import { ref, reactive } from "vue";
 footer {
     width: 100%;
     height: 30vh;
-    background-color: #8E6E67;
+    background: linear-gradient(45deg, #3f3d40, #666468, #858287);
+    opacity: 0.7;
     color: #FAF0F2;
 }
 

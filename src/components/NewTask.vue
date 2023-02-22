@@ -3,12 +3,12 @@
         <h1 class="home-title">Add a new Task</h1>
     <div class="add-task-form">
         <div>
-            <input type="text" class="input-field" placeholder="Add a Task Title" v-model="name">
+            <input type="text" class="input-field" placeholder="add title for your new task..." v-model="name">
         </div>
         <div>
             <textarea name="descr" 
-            class="input-field" placeholder="Add a Task Description..."
-            v-model="description" cols="30" rows="10"></textarea>
+            class="input-field" placeholder="add a description..."
+            v-model="description" cols="30" rows="5"></textarea>
         </div>
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
@@ -43,7 +43,7 @@ if(name.value.length < 4 || description.value.length < 4){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = "Missing title and description or too short";
+    errorMessage.value = "Missing title and description or way too short :(";
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);

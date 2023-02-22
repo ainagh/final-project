@@ -20,12 +20,12 @@
             id="password"
             v-model="password"
             required/> <br>
+    <p class="incorrect-alert" v-if="aviso">Email or Password not correct</p>
    <div class="sign-in-container">
     <button class="cloud-button" type="submit">Sign In</button>
   </div>
     <p class="sign-up">First time here?  <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/> </p>
   </form>
-  <p v-if="aviso">Email or Password not correct</p>
   </div>
   </div>
 
@@ -132,12 +132,12 @@ const signIn = async () => {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 .sign-up {
- padding: 40px;
- margin-bottom: 200px;
+ padding-top: 40px;
  display: flex;
  justify-content: center;
  align-items: center;
  gap: 10px;
+ margin-bottom: 200px;
 }
 
 p a {
@@ -145,6 +145,14 @@ p a {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+}
+
+.incorrect-alert {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ED6A5A;
+  font-weight: 700;
 }
 
 

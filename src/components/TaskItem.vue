@@ -1,21 +1,25 @@
 <template>
-<div class="container">
-    <p>{{task.is_complete ? 'done :)' : 'not completed yet'}}</p>
+<div class="parent-container">
+    <p class="task-alert">{{task.is_complete ? 'done!' : 'not completed yet'}}</p>
   <!--   <p :class="">{{  }}</p> -->
+  <div class="cloud-container">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
     <h4 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
-    <button @click="toggleTask"> {{task.is_complete ? 'Uncomplete' : 'Completed'}}</button>
+</div>
+  <div class="task-buttons">
+    <button class="complete-button" @click="toggleTask"> {{task.is_complete ? 'Uncomplete' : 'Completed'}}</button>
     
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
         <Modal :isComplete="task.is_complete"/>
-        <button class="disabled">&#x1F4DD {{task.title}}</button>
+        <button class="disabled">&#x1F4DD edit {{task.title}}</button>
     </template>
     <template  v-else>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
         <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
-        <button @click="inputToggle">&#x1F4DD {{task.title}}</button>
+        <button @click="inputToggle">&#x1F4DD edit {{task.title}}</button> 
     </template>
+</div>
    
     <div v-if="showInput">
         <div>
@@ -31,6 +35,7 @@
     </div>
         <button @click="sendData">Send Data</button>
     </div>
+  
 </div>
 </template>
 
@@ -128,6 +133,108 @@ const editMessage = async () => {
     opacity: 50%;
 }
 
+.parent-container {
+  width: 340px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.cloud-container {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(45deg, #ffffff, #f1f1f1);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-container:before,
+.cloud-container:after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud-container:before {
+  width: 150px;
+  height: 150px;
+  top: -70px;
+  left: -50px;
+}
+
+.cloud-container:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: -30px;
+}
+
+.cloud-container:hover {
+    background: linear-gradient(45deg, #d7d7d7, #f1f1f1, #ffffff);
+}
+
+.task-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-alert {
+   /*  text-align: center; */
+   display: inline-block;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 140px;
+    line-height: 1.5;
+}
+
+/* .cloud-container {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(45deg, #ffffff, #f1f1f1);
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+ */
+
+/* .cloud-container:before,
+.cloud-container:after {
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud-container:before {
+  width: 150px;
+  height: 150px;
+  top: -70px;
+  left: -50px;
+}
+
+.cloud-container:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: -30px;
+}
+ */
 
 </style>
 
