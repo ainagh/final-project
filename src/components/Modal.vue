@@ -7,7 +7,7 @@
 </div>
 <div id="demo-modal" class="modal">
     <div class="modal__content">
-        <h1>Are you sure you want to delete?</h1>
+        <h2>Are you sure you want to delete?</h2>
         <p>
             It's going to be gone forever...
         </p>
@@ -67,9 +67,6 @@ const deleteTaskModal = () => {
   color: black;
 }
 
-#demo-modal {
-  height: 100%;
-}
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -78,7 +75,7 @@ const deleteTaskModal = () => {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,10 +92,10 @@ const deleteTaskModal = () => {
 .modal__content {
   border-radius: 4px;
   position: relative;
-  width: 500px;
+  width: 40%;
   max-width: 90%;
   background: #fff;
-  padding: 1em 2em;
+  padding: 30px 50px;
 }
 .modal__close {
   position: absolute;
