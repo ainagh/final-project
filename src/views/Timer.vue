@@ -2,7 +2,8 @@
 <template>
     <Nav />
     <div class="container">
-     <h1 class="title">Pomodoro Timer &#x23F3</h1>
+     <h1 class="title">Timer</h1>
+     <h3>Track your study sessions!</h3>
      <div class="timer">
         <svg
         width="163"
@@ -103,16 +104,20 @@ import Footer from '../components/Footer.vue';
 <!-- CSS HERE -->
 <style scoped>
 .container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 h1 {
-    font-size: 54px;
+    font-size: 40px;
     margin-right: 10px;
 }
+
+h3 {
+  margin: 0;
+}
+
 .title {
     margin-top: 50px;
     display: flex;
@@ -122,7 +127,7 @@ h1 {
 
 .timer {
     position: relative;
-    margin-top: 100px;
+    margin-top: 70px;
     width: 330px;
     height: 330px;
 }

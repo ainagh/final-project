@@ -75,6 +75,7 @@ nav a {
   font-size: 40px;
 }
 
+
 /* SignIn Component */
 
 /* h1 {
@@ -184,4 +185,11 @@ nav a {
     max-width: 100%;
     max-height: 100%;
   }
+
+
+  /* -------- MUSIC -------- */
+
+  /* .playlist-rec {
+    margin-top: 15%;
+  } */
 }

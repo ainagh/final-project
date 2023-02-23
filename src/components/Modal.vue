@@ -7,12 +7,12 @@
 </div>
 <div id="demo-modal" class="modal">
     <div class="modal__content">
-        <h2>Are you sure you want to delete?</h2>
-        <p>
+        <h2>Are you sure you want to delete this task?</h2>
+        <!-- <p>
             It's going to be gone forever...
-        </p>
-        <a href="#" class="modal__close">&times;</a>
-        <button @click="deleteTaskModal">Yes, delete it</button>
+        </p> -->
+        <a href="#" class="modal__close"><!-- &times; -->&#x2716</a>
+        <button class="yes-delete" @click="deleteTaskModal">Yes, delete it</button>
     </div>
 </div>
 </template>
@@ -90,18 +90,41 @@ const deleteTaskModal = () => {
 }
 
 .modal__content {
-  border-radius: 4px;
+  border-radius: 20px;
   position: relative;
   width: 40%;
   max-width: 90%;
-  background: #fff;
+  background: linear-gradient(45deg, #c5c4c4, #f1f1f1, #afaeae);
   padding: 30px 50px;
+  text-align: center;
 }
 .modal__close {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 17px;
   color: #585858;
   text-decoration: none;
-}</style>
+  font-size: 28px;
+}
+
+.yes-delete {
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: none;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.yes-delete:hover {
+  background: linear-gradient(45deg, #f18e8e, #f8d0d0, #f18e8e);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+</style>
 

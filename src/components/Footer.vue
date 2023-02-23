@@ -20,6 +20,7 @@ footer {
     background: linear-gradient(45deg, #3f3d40, #666468, #858287);
     opacity: 0.7;
     color: #FAF0F2;
+    margin-top: 20%;
 }
 
 .footer-text {

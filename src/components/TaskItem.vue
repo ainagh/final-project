@@ -37,7 +37,6 @@
         </div>
         <button class="send-button" @click="sendData">Send Data</button>
     </div>
-  
 </div>
 </template>
 
@@ -182,7 +181,7 @@ const editMessage = async () => {
   border-radius: 10px;
   font-size: 14px;
   font-weight: 300;
-  margin-top: 15px;
+  margin-top: 0;
   padding: 10px 20px;
   display: inline-block;
   cursor: pointer;
@@ -241,6 +240,7 @@ const editMessage = async () => {
     font-size: 14px;
     font-weight: 600;
 }
+
 </style>
 
 <!--
