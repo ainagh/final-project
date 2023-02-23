@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
     <Nav />
-    <h4>{{ date }}</h4>
+    <div class="date">
+     <h4>{{ date }}</h4>
+    </div>
     <NewTask @addTitle="getTasks"/>
     <h1>Tasks</h1>
     <div class="all-tasks">
@@ -24,8 +26,8 @@ import moment from 'moment'
 const taskStore = useTaskStore();
 
 // USING MOMENT LIBRARY
-const time = moment().format('MMMM Do YYYY')
-const date = ref(`La fecha de hoy es ${time}`)
+const time = moment().format('dddd, Do of MMMM YYYY')
+const date = ref(`Today is ${time}`)
 
 const testFunc = () => {
   const time = moment().format('MMMM Do YYYY, h:mm:ss a')
@@ -56,6 +58,12 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
 }
 
 </style>

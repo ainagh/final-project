@@ -107,6 +107,11 @@ import Footer from '../components/Footer.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 9%;
+}
+
+.timer {
+  z-index: -1;
 }
 
 h1 {
@@ -119,7 +124,6 @@ h3 {
 }
 
 .title {
-    margin-top: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;

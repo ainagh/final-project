@@ -5,7 +5,7 @@
   <div :class="props.task.is_complete ? 'cloud-rosa':'cloud-container'">
     <h3 :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.title }}</h3>
   </div>
-    <h4 class="description-container" :class="props.task.is_complete ? 'taskCompleted' : '' ">{{ task.description }}</h4>
+    <h4 :class="props.task.is_complete ? 'description-complete' : 'description-container' ">{{ task.description }}</h4>
 
   <div class="task-buttons">
     <button class="complete-button" @click="toggleTask"> {{task.is_complete ? '&#x274C' : '&#x2714'}}</button>
@@ -13,8 +13,8 @@
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
        <!--  <Modal :isComplete="task.is_complete"/> -->
-        <button class="disabled edit-button">✏️</button>
-        <button disabled class="edit-button">delete</button>
+       <button disabled class="delete-button">&#x1F5D1</button> 
+       <button class="disabled edit-button">✏️</button>
     </template>
     <template  v-else>
         <button  class="delete-button" @click="showModalFunc">&#x1F5D1</button>
@@ -171,7 +171,12 @@ const editMessage = async () => {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+ /*  animation:scale-up-top-right 0.7s; */
 }
+
+/* @keyframes scale-up-top-right{
+    0%{transform:scale(.5); transform-origin:top right}
+    100%{transform:scale(1);transform-origin:top right}} */
 
 .cloud-container {
     background-image: url('../../public/cloud2.png');
@@ -193,6 +198,7 @@ const editMessage = async () => {
     background-repeat: no-repeat;
     min-height: 200px;
     width: 300px;
+    color: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,6 +220,22 @@ const editMessage = async () => {
   display: inline-block;
   cursor: pointer;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); 
+  white-space: pre-line;
+}
+
+.description-complete {
+  background-color: #d8c8d2;
+  color: gray;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); 
+  white-space: pre-line;
 }
 
 .task-buttons {
@@ -223,7 +245,7 @@ const editMessage = async () => {
     align-items: center;
 }
 
-.complete-button, .edit-button, .delete-button .send-button {
+.complete-button, .edit-button, .delete-button, .send-button {
   border-radius: 50px;
   background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border: none;

@@ -171,6 +171,7 @@ nav a {
   .all-hamburguer {
     position: fixed;
     width: 100%;
+    top: 4vh;
   }
 
   h1 {
@@ -200,6 +201,17 @@ nav a {
   }
 
   h2 {
-    margin-top: 10vh;
+    margin-top: 12vh;
+    padding: 4%;
+    text-align: center;
   }
+
+  /* 
+  .title-music {
+    margin-left: 0%;
+  }
+
+  .background-music {
+    margin-left: 0%;
+  } */
 }

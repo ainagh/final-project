@@ -83,4 +83,14 @@ iframe {
     flex-wrap: wrap;
     gap: 20px;
 }
+
+@media (max-width: 766px) {
+    .title-music {
+    margin: 0.5%;
+  }
+
+  .background-music {
+    margin: 0.5%;
+  }
+}
 </style>
