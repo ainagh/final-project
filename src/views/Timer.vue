@@ -107,7 +107,7 @@ import Footer from '../components/Footer.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 9%;
+    margin-top: 7vh;
 }
 
 .timer {

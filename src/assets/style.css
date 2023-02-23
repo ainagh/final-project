@@ -42,8 +42,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, #858287, #666468, #3f3d40);
-  opacity: 0.7;
+  background: linear-gradient(45deg, #3f3d40, #858287, #666468, #3f3d40);
+  opacity: 0.8;
   padding: 10px 20px 10px 20px;
 }
 
@@ -70,9 +70,16 @@ nav a {
   padding-left: 10px;
 }
 
+.nav-cloud {
+  font-size: 40px;
+  margin: 0;
+  color: #FAF0F2;
+}
+
 .task-buttons {
   gap: 20px;
   font-size: 40px;
+
 }
 
 

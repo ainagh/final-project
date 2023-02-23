@@ -2,7 +2,7 @@
 <template>
 <footer>
 <div class="footer-text">
-    <h3>© tasks &#x2601. created with love by: Aina &#x2764</h3>
+    <h3>© cloudy &#x2601 created with lots of love (and stress) by Aina &#x2764</h3>
 </div>
 </footer>
 
@@ -17,8 +17,8 @@ import { ref, reactive } from "vue";
 footer {
     width: 100%;
     height: 30vh;
-    background: linear-gradient(45deg, #3f3d40, #666468, #858287);
-    opacity: 0.7;
+    background: linear-gradient(45deg, #3f3d40, #666468, #858287,#3f3d40);
+    opacity: 0.8;
     color: #FAF0F2;
     margin-top: 20%;
 }

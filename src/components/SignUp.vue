@@ -4,7 +4,7 @@
     <div class="header">
       <h1 class="header-icon">&#x2601</h1>
       <div class="header-description">
-        <h3 class="header-title">Register to xxxx</h3>
+        <h3 class="header-title">Register to cloudy</h3>
         <p class="header-subtitle">Start organizing your study sessions</p>
       </div>
     </div>

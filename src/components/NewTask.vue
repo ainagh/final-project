@@ -3,7 +3,7 @@
         <h1 class="home-title">Add a new Task</h1>
     <div class="add-task-form">
         <div>
-            <input type="text" class="input-field" placeholder="add title for your new task..." v-model="name">
+            <input type="text" class="input-field" placeholder="add a title for your new task..." v-model="name">
         </div>
         <div>
             <textarea name="descr" 
@@ -44,7 +44,7 @@ if(name.value.length < 4 || description.value.length < 4){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = "Missing title and description or way too short :(";
+    errorMessage.value = "Oh! You have to write a minimum of 4 characters";
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);
@@ -126,5 +126,10 @@ if(name.value.length < 4 || description.value.length < 4){
 
 .add-task-form {
     margin: 40px;
+}
+
+.error-text {
+    color: rgb(131, 90, 131);
+    font-weight: 600;
 }
 </style>

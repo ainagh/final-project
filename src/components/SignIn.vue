@@ -4,7 +4,7 @@
 
   <div class="container">
     <h1 class="header-icon">&#x2601</h1>
-    <h3 class="header-title">Welcome to xxxx</h3>
+    <h3 class="header-title">Welcome to cloudy</h3>
     <p class="header-subtitle">Come have a peaceful study session</p>
 
    <div class="sign-in-form">

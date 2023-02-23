@@ -1,16 +1,16 @@
 <template>
   <nav class="nav-menu">
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/"> Tasks App </router-link>
+    <p class="nav-cloud">&#x2601</p>
     <ul class="nav-ul">
-      <!-- <li>
-        <router-link to="/account">Your Account</router-link>
-      </li> -->
       <li>
-        <router-link to="/timer">Timer</router-link>
+        <router-link to="/"> My Tasks </router-link>
       </li>
       <li>
         <router-link to="/music">Background Music</router-link>
+      </li>
+      <li>
+        <router-link to="/timer">Timer</router-link>
       </li>
     </ul>
       <ul>
@@ -34,13 +34,13 @@
     <div class="row dropdown" :class="{ 'dropdown-after' : menuOpen }">
      <ul class="navlist">
       <li class="navlistitem">
-        <router-link to="/">Tasks App</router-link>
-      </li>
-      <li class="navlistitem">
-        <router-link to="/timer">Timer</router-link>
+        <router-link to="/">My Tasks</router-link>
       </li>
       <li class="navlistitem">
         <router-link to="/music">Background Music</router-link>
+      </li>
+      <li class="navlistitem">
+        <router-link to="/timer">Timer</router-link>
       </li>
       <li class="logout-hamburguer">
           <button @click="signOut" class="logout-button">Log out</button>
