@@ -4,6 +4,11 @@
     <div class="date">
      <h4>{{ date }}</h4>
     </div>
+    <img class="cloud-1" src="../../public/cloud.png" alt="cloud">
+    <img class="cloud-2" src="../../public/cloud.png" alt="cloud">
+    <img class="cloud-3" src="../../public/cloud.png" alt="cloud">
+    <img class="cloud-4" src="../../public/cloud.png" alt="cloud">
+    <img class="cloud-5" src="../../public/cloud.png" alt="cloud">
     <NewTask @addTitle="getTasks"/>
     <h1>Tasks</h1>
     <div class="all-tasks">
@@ -64,6 +69,42 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 8vh;
+}
+
+.cloud-1 {
+  position: absolute;
+  margin-top: 4vh;
+  margin-left: 16vh;
+  width: 160px;
+  border-radius: 50%;
+}
+.cloud-2 {
+  position: absolute;
+    margin-top: 45vh;
+    margin-left: 40vh;
+    width: 131px;
+    border-radius: 50%;
+}
+.cloud-3 {
+  position: absolute;
+    margin-top: -6vh;
+    margin-left: 168vh;
+    width: 152px;
+    border-radius: 50%;
+}
+.cloud-4 {
+  position: absolute;
+    margin-top: 27vh;
+    margin-left: 145vh;
+    width: 103px;
+    border-radius: 50%;
+}
+.cloud-5 {
+  position: absolute;
+    margin-top: 48vh;
+    margin-left: 168vh;
+    width: 121px;
+    border-radius: 50%;
 }
 
 </style>
