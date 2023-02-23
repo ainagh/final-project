@@ -12,12 +12,15 @@
     
     <template  v-if="task.is_complete" >
         <!-- <button class="disabled">Delete {{task.title}} </button> --> 
-        <Modal :isComplete="task.is_complete"/>
+       <!--  <Modal :isComplete="task.is_complete"/> -->
         <button class="disabled edit-button">✏️</button>
+        <button disabled class="edit-button">delete</button>
     </template>
     <template  v-else>
+        <button  class="delete-button" @click="showModalFunc">&#x1F5D1</button>
         <!-- <button  @click="deleteTask">Delete {{task.title}}</button>  -->
-        <Modal :isComplete="task.is_complete" @deleteTask="deleteTask"/>
+      <!--   <Modal :isComplete="task.is_complete" @newEmit="deleteTask" :taskId="task.id" /> -->
+       <!--  <button @click="deleteTask">delete tasssssssk</button> -->
         <button class="edit-button" @click="inputToggle">✏️ </button> 
     </template>
 </div>
@@ -38,6 +41,7 @@
         <button class="send-button" @click="sendData">Send Data</button>
     </div>
 </div>
+<ModalNew v-if="displayModal" @deleteTaskEmit="deleteTaskSupa" @closeModalEmit="closeModalFunc" />
 </template>
 
 <script setup>
@@ -45,6 +49,7 @@ import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 import Modal from './Modal.vue'
+import ModalNew from './ModalNew.vue'
 
 const taskStore = useTaskStore();
 const emit = defineEmits(["updateTask"]);
@@ -69,12 +74,35 @@ function inputToggle(){
 }
 
 
-// Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
+// /* MODAL LOGIC */
+const displayModal = ref(false)
+const showModalFunc = () => {
+    displayModal.value =!displayModal.value
+}
 
-const deleteTask = async() => {
+const deleteTaskSupa = async () => {
     await taskStore.deleteTask(props.task.id);
     emit("updateTask")
+}
+
+const closeModalFunc = () => displayModal.value =!displayModal.value
+
+// Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
+
+const deleteTask =  async () => {
+    console.log("click de la funcion de deleteTask del taskItem");
+    //console.log(paramDelEmit);
+    await taskStore.deleteTask(props.task.id);
+    //console.log(props.task.id);
+    emit("updateTask")
 };
+
+const test = async (paramDelEmit) => {
+    let currentTaskIdToDelete = paramDelEmit
+    console.log(currentTaskIdToDelete);
+    //await taskStore.deleteTask(currentTaskIdToDelete)
+    //emit("updateTask")
+}
 
 const showErrorMessage = ref ()
 const errorMessage = ref(null);
@@ -195,7 +223,7 @@ const editMessage = async () => {
     align-items: center;
 }
 
-.complete-button, .edit-button, .send-button {
+.complete-button, .edit-button, .delete-button .send-button {
   border-radius: 50px;
   background: linear-gradient(45deg, #ffffff, #f1f1f1, #d7d7d7);
   border: none;
@@ -215,6 +243,15 @@ const editMessage = async () => {
 .complete-button:hover {
     background: linear-gradient(45deg, #b5eacb, #d7ece0, #ffffff);
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.delete-button:hover {
+  background: linear-gradient(45deg, #f18e8e, #f8d0d0, #ffffff);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.delete-button:visited {
+  color: black;
 }
 
 .input-field {

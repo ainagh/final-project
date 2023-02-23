@@ -4,10 +4,12 @@
 <div class="wrapper">
     <router-link class="delete-button common-button" v-if="props.isComplete" :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" to="">&#x1F5D1</router-link>
     <a class="delete-button" v-else :class="props.isComplete ? 'buttonClass disabled' : 'buttonClass'" href="#demo-modal">&#x1F5D1</a>
+    <button @click="showModalFunction">show modal</button>
 </div>
-<div id="demo-modal" class="modal">
+<div id="demo-modal" class="modal" v-if="showModal">
     <div class="modal__content">
         <h2>Are you sure you want to delete this task?</h2>
+        <h2>d: {{ taskId }}</h2>
         <!-- <p>
             It's going to be gone forever...
         </p> -->
@@ -20,14 +22,25 @@
 <script setup>
 import { ref, reactive } from "vue";
 
+const showModal = ref(true)
+const showModalFunction = () => {
+  console.log("click");
+  showModal.value = !showModal.value
+}
+
 const props = defineProps ({
     isComplete: Boolean,
+    taskId: Number,
 });
 
-const emit = defineEmits(["deleteTask"])
+const taskId = props.taskId
+console.log(taskId);
+
+const emit = defineEmits(["deleteTaskEmit", "newEmit"])
 
 const deleteTaskModal = () => {
-    emit ("deleteTask")
+  console.log("click del emit");
+    emit("newEmit")
 };
 
 
@@ -107,6 +120,9 @@ const deleteTaskModal = () => {
   font-size: 28px;
 }
 
+.modal-buttons {
+  gap: 30px;
+}
 .yes-delete {
   background-color: #ffffff;
   border-radius: 50px;

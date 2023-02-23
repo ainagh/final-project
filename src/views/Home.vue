@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <Nav />
+    <h4>{{ date }}</h4>
     <NewTask @addTitle="getTasks"/>
     <h1>Tasks</h1>
     <div class="all-tasks">
@@ -11,15 +12,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onUpdated } from 'vue'
 import { useTaskStore } from "../stores/task";
 import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 import Footer from '../components/Footer.vue';
+import moment from 'moment'
 
 const taskStore = useTaskStore();
+
+// USING MOMENT LIBRARY
+const time = moment().format('MMMM Do YYYY')
+const date = ref(`La fecha de hoy es ${time}`)
+
+const testFunc = () => {
+  const time = moment().format('MMMM Do YYYY, h:mm:ss a')
+ }
+
+console.log(testFunc());
 
 // Variable para guardar las tareas de supabase
 const tasks = ref([]);

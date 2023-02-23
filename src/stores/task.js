@@ -32,7 +32,7 @@ export const useTaskStore = defineStore("tasks", () => {
     const { data, error } = await supabase.from("tasks").update({
       title: title,
       description: description
-    }).match({id: id});
+    }).match({ id: id });
   }
 
   // borrar tareas de supabase
@@ -45,7 +45,7 @@ export const useTaskStore = defineStore("tasks", () => {
   const toggleTask = async (id, boolean) => {
     const { data, error } = await supabase.from("tasks").update({
       is_complete: boolean
-    }).match({id: id});
+    }).match({ id: id });
   };
 
   return { tasksArr, fetchTasks, addTask, deleteTask, editTask, toggleTask };
