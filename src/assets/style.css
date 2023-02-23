@@ -189,7 +189,15 @@ nav a {
 
   /* -------- MUSIC -------- */
 
-  /* .playlist-rec {
-    margin-top: 15%;
-  } */
+  .youtube-playlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  h2 {
+    margin-top: 10vh;
+  }
 }

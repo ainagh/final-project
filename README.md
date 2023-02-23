@@ -157,9 +157,21 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 
 Para el día de hoy tengo pensado centrarme en el style del Home en general: al añadir las tasks, el modal... También ir trabajando en el responsive de la misma página.
 
-- [ ] Style CSS de Home
-- [ ] Responsive del Home
-- [ ] Añadir iframe a Background Music
+- [x] Style CSS de Home
+- [x] Responsive del Home
+- [x] Añadir iframe a Background Music
+
+#### Day Eight
+
+###### Jueves 23, Febrero 2023
+
+Al ser hoy ya casi el último día que le podemos dedicar a este proyecto, mi objetivo es acabar de implementar algunos estilos que no están completos y pulir todo lo que me de tiempo, siempre priorizando.
+
+- [ ] Corregir Modal
+- [ ] Título del responsive pág Music
+- [ ] Estilizar navbar
+- [ ] Animation al crear new task ???
+- [ ] Añadir fecha de hoy
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -89,7 +89,7 @@
           d="M160.17,0A172,172,0,0,0,0,161.51"
         />
       </svg>
-    <h2>25:00</h2>
+    <p class="minutes-timer">25:00</p>
      </div>
      <button>Start!</button>
     </div>
@@ -152,14 +152,13 @@ h3 {
   top: 0px;
   left: 0px;
 }
-h2 {
+.minutes-timer {
   position: absolute;
-  top: 35%;
-  left: 52%;
+  top: 31%;
+  left: 51%;
   transform: translate(-50%, -50%);
   font-size: 58px;
   color: #634b66;
-
 }
 
 button {
