@@ -59,10 +59,33 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 <img src="" alt="Logo" width="100%" height="50%">
 
+<!-- El proyecto que van a poder ver a continuación, es el midterm project correspondiente al Bootcamp de Frontend de Ironhack. 
+Para este proyecto, teníamos que clonar una página web que se nos daba de ejemplo, aplicando los conocimientos de HTML, CSS y parte de JavaScript que hemos adquirido durante las pasadas dos semanas. Además de estar trabajando y familiarizarnos aún más con Visual Studio Code, hemos aprendido a usar la herramienta GitHub para trabajar en equipo, ya que hasta ahora solo la habíamos usado como repositorio personal. 
+
+Este proyecto ha sido desarrollado por dos personas. Desde el principio decidimos repartirnos las secciones y/o páginas, para así poder ir avanzando más rápido, pero también acordamos explicarnos en lo que íbamos progresando para así poder entender ambas como cada parte del proyecto se había realizado. Por supuesto, siempre que tuvimos dudas las comentábamos entre nosotras primero, para así poder dar un segundo punto de vista antes de buscar en la web o pedir ayuda más profesional. -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Construido Con
+
+Como ya se ha comentado por encima en la sección previa, los lenguajes utilizados para desarrollar este proyecto ha sido HTML, CSS y JavaScript, utilizando el framework de Vue.js. <!-- Aunque ya llevábamos dos semanas practicando, usar los tres lenguajes a la vez ha sido todo un reto. -->
+
+Como también se ha comentado, algunas que otras veces he tenido que buscar información en la web para poder entender, adaptar o incluso empezar de cero una sección. Estas son algunas de las páginas que me han brindado la información que he necesitado:
+
+
+- YouTube [https://www.youtube.com/]
+- Flexbox Help [https://flexbox.help/]
+- W3Schools [https://www.w3schools.com/]
+- MDN [https://developer.mozilla.org/en-US/]
+- Chat GPT [https://chat.openai.com/chat]
+- Moments [https://momentjs.com/]
+- Coolors [https://coolors.co/]
+- Photopea [https://www.photopea.com/]
+- Emojipedia [https://emojipedia.org/]
+
+Otro recurso utilizado del que ya hemos hablado es GitHub. Este repositorio online era una herramienta completamente nueva para ambas, que solo lo habíamos utilizado para uso individual. 
+
 
 
 <!-- - YouTube [https://www.youtube.com/]
@@ -92,9 +115,7 @@ El objetivo principal del primer día es, por supuesto, crear y conectar el proy
 - [x] Ej - Crear section "projects" en html -->
 - [x] Crear el proyecto y conectarlo al repositorio de Github
 - [x] Conectar el proyecto a la base de datos de Supabase
-- [ ] Leer, entender y adaptarme al código
 - [x] Hacer una lista de tareas de todo lo que se necesita para completar el proyecto
-
 
 
 #### Day Two
@@ -136,10 +157,9 @@ Como objetivos para el día de hoy, me gustaría poder tener la lógica de la p�
 
 Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer, y después dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También buscar los errores del hamburger menu.
 
-- [ ] Elección de temática (colores, distribución...)
-- [ ] Timer
-- [ ] Responsive (Hamburger)
-- [ ] Estilaje CSS en documento style.css
+- [x] Elección de temática (colores, distribución...)
+- [x] Responsive (Hamburger)
+- [x] Empezar estilaje CSS en documento style.css
 
 #### Day Six
 
@@ -148,7 +168,6 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer, y después dedicarme exclusivamente a estilar, empezando por los puntos que vayan a tener en común lás diferentes páginas. También buscar los errores del hamburger menu.
 
 - [x] Responsive (Hamburger)
-- [ ] Acabar lógica del Timer
 - [x] Estilaje CSS en documento style.css
 
 #### Day Seven
@@ -167,11 +186,22 @@ Para el día de hoy tengo pensado centrarme en el style del Home en general: al 
 
 Al ser hoy ya casi el último día que le podemos dedicar a este proyecto, mi objetivo es acabar de implementar algunos estilos que no están completos y pulir todo lo que me de tiempo, siempre priorizando.
 
-- [ ] Corregir Modal
-- [ ] Título del responsive pág Music
-- [ ] Estilizar navbar
-- [ ] Animation al crear new task ???
-- [ ] Añadir fecha de hoy
+- [x] Corregir Modal
+- [x] Arreglar button de Delete
+- [x] Añadir un return al textarea
+- [x] Título del responsive pág Music
+- [x] Responsive Music y Timer
+- [x] Estilizar navbar
+- [x] Añadir fecha de hoy
+
+#### Day Nine
+
+###### Viernes 24, Febrero 2023
+
+Como hoy es el último día que le podemos dedicar a este proyecto antes de las presetaciones, mi objectivo es acabar de corregir algunos errores de CSS
+
+- [ ] Añadir imagen para completar el background
+- [ ] Arreglar responsive del footer
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -188,13 +218,14 @@ En esta sección se puede incluir información como:
 - Información sobre experiencia laboral o académica relacionada con el proyecto.
 - Enlaces a perfiles en redes sociales o sitios web personales. -->
 
+Hola, soy Aina! Hace seis no sabía nada de programación. Venía de un mundo completamente diferente, de la educación. Dando un giro de 180º, deicidí arriesgarme y probar un nuevo camino. Este proyecto ha salido con pocos conocimientos pero muchas ganas y dedicación. Espero que os guste.
 
 Aina Gatell - aina.gatell@gmail.com
 
 
-Project Link: []
+Project Link: [https://final-project-kappa-fawn.vercel.app/auth/login]
 
-Presentation Link: []
+Presentation Link: [https://docs.google.com/presentation/d/12x4MaUfIitir16PGRceBtPRtHHHL7IlK5GOzE6OBdQQ/edit?usp=sharing]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,6 +233,14 @@ Presentation Link: []
 
 ## Agradecimientos
 
+En esta sección me gustaría dar las gracias a todas las personas que, de alguna manera, han formado parte de este proyecto.
+
+Agradecer a los profesores por la dedicación, por todas las dudas resueltas y por levantarnos los ánimos.
+Aleix, gracias por el diseño.
+
+Y, por supuesto, a nuestras compañeras y compañeros, por crear un ambiente de trabajo excelente y lúdico, siempre apoyándonos y, también, compartiendo penas.
+
+Muchas gracias a todas y todos! Suerte!
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
