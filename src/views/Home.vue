@@ -77,6 +77,7 @@ h1 {
   margin-left: 16vh;
   width: 160px;
   border-radius: 50%;
+  z-index: -1;
 }
 .cloud-2 {
   position: absolute;
@@ -84,6 +85,7 @@ h1 {
     margin-left: 40vh;
     width: 131px;
     border-radius: 50%;
+    z-index: -1;
 }
 .cloud-3 {
   position: absolute;
@@ -91,6 +93,7 @@ h1 {
     margin-left: 168vh;
     width: 152px;
     border-radius: 50%;
+    z-index: 0;
 }
 .cloud-4 {
   position: absolute;
@@ -98,6 +101,7 @@ h1 {
     margin-left: 145vh;
     width: 103px;
     border-radius: 50%;
+    z-index: -1;
 }
 .cloud-5 {
   position: absolute;
@@ -105,6 +109,13 @@ h1 {
     margin-left: 168vh;
     width: 121px;
     border-radius: 50%;
+    z-index: -1;
+}
+
+@media (max-width: 1300px ) {
+  .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5 {
+    display: none;
+  } 
 }
 
 </style>

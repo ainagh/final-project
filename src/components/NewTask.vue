@@ -77,6 +77,7 @@ if(name.value.length < 4 || description.value.length < 4){
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 300;
 }
 .home-title {
  font-size: 40px;
