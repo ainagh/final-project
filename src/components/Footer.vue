@@ -30,5 +30,11 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 766px) {
+    .footer-text h3 {
+    text-align: center;
+}
+}
 </style>
 
