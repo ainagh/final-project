@@ -1,4 +1,4 @@
-READMEE
+README
 
  <!-- 
 Un archivo README.md es un archivo de markdown que contiene información sobre un proyecto. Típicamente se encuentra en el directorio raíz de un proyecto y se utiliza para proporcionar documentación e instrucciones para otros que puedan querer usar o contribuir al proyecto.
@@ -41,9 +41,6 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
     <a href="#roadmap">Roadmap</a>
      <ul>
      <li><a href="#backlog">Back log</a></li>
-        <li><a href="#day-one">Martes, 07 Febrero 2023</a></li>
-        <li><a href="#day-two">Miercoles, 08 Febrero 2023</a></li>
-        <li><a href="#day-three">Jueves, 09 Febrero 2023</a></li>
       </ul>
     </li>
     <li><a href="#acerca">Acerca</a></li>
@@ -57,12 +54,13 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 ## Acerca del Proyecto
 
-<img src="" alt="Logo" width="100%" height="50%">
+El proyecto que vanse puede ver a continuación, es el final project correspondiente al Bootcamp de Frontend de Ironhack. 
+Para este proyecto, teníamos que crear una ToDo App en la que los usuarios puedieran añadir, editar y eliminar tasks. A parte de estas funcionalidades básicas, también podíamos añadir otras páginas a gusto personal. Esta vez, el estilo de la página era totalmente libre, así cada uno de nosotros ha podido plasmar su personalidad en este proyecto.
 
-<!-- El proyecto que van a poder ver a continuación, es el midterm project correspondiente al Bootcamp de Frontend de Ironhack. 
-Para este proyecto, teníamos que clonar una página web que se nos daba de ejemplo, aplicando los conocimientos de HTML, CSS y parte de JavaScript que hemos adquirido durante las pasadas dos semanas. Además de estar trabajando y familiarizarnos aún más con Visual Studio Code, hemos aprendido a usar la herramienta GitHub para trabajar en equipo, ya que hasta ahora solo la habíamos usado como repositorio personal. 
+En mi caso, quise nombrar a este pryecto "cloudy". Una página visual, con la funcionalidad de ayudar a los estudiates a organizarse y planear sus estudios. 
+En la página principal, "My Tasks" podemos ver lo requerido para este proyecto, una página donde los estudiantes puedes añadir, editar y eliminar las tasks que se quieran crear. En la segunda página "Background Music" he querido añadir unas preferencias personales de música de fondo que te puede ayudar a relajarte y/o concentrarte en tus estudios. En la última página por ahora, he querido añadir un Pomodoro Timer, aunque me quedé corta de tiempo y solo pude añadir el estilo. Me queda pendiente para el futuro añadir la lógica.  
 
-Este proyecto ha sido desarrollado por dos personas. Desde el principio decidimos repartirnos las secciones y/o páginas, para así poder ir avanzando más rápido, pero también acordamos explicarnos en lo que íbamos progresando para así poder entender ambas como cada parte del proyecto se había realizado. Por supuesto, siempre que tuvimos dudas las comentábamos entre nosotras primero, para así poder dar un segundo punto de vista antes de buscar en la web o pedir ayuda más profesional. -->
+He disfrutado mucho haciendo este proyecto, viendo como iba cogiendo forma poco a poco a mi gusto. Me quedan pendientes diversas funcionalidades a añadir para un futuro, pero aun así, puedo decir que estoy muy contenta con el resultado.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -84,14 +82,6 @@ Como también se ha comentado, algunas que otras veces he tenido que buscar info
 - Photopea [https://www.photopea.com/]
 - Emojipedia [https://emojipedia.org/]
 
-Otro recurso utilizado del que ya hemos hablado es GitHub. Este repositorio online era una herramienta completamente nueva para ambas, que solo lo habíamos utilizado para uso individual. 
-
-
-
-<!-- - YouTube [https://www.youtube.com/]
-- W3Schools [https://www.w3schools.com/]
-- MDN [https://developer.mozilla.org/en-US/]
-- Chat GPT [https://chat.openai.com/chat] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +128,6 @@ Quizás siendo un poco optimista, como objetivos para el día de hoy tengo fijar
 - [x] Trabajar en la lógica en los componentes NewTasks y TaskItem, lo que incluye:
 - [x] Conseguir que al añadir o eliminar una task, no se tenga que refrescar la página para que aparezcan
 - [x] Añadir e implementar los buttons de "Mark as Completed" y "Edit Task"
-- [ ] Hacer que salte una alert cuando se quiere eliminar una task
 
 
 #### Day Four
@@ -149,7 +138,7 @@ Como objetivos para el día de hoy, me gustaría poder tener la lógica de la p�
 
 - [x] Acabar el toggle del button "Mark as Completed"
 - [x] Hacer que salte una alert modal cuando se quiere eliminar una task
-- [ ] Empezar la página de Profiles ?
+
 
 #### Day Five
 
@@ -161,6 +150,7 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 - [x] Responsive (Hamburger)
 - [x] Empezar estilaje CSS en documento style.css
 
+
 #### Day Six
 
 ###### Martes 21, Febrero 2023
@@ -169,6 +159,7 @@ Como objetivos para el día de hoy, me gustaría en primer lugar acabar el timer
 
 - [x] Responsive (Hamburger)
 - [x] Estilaje CSS en documento style.css
+
 
 #### Day Seven
 
@@ -179,6 +170,7 @@ Para el día de hoy tengo pensado centrarme en el style del Home en general: al 
 - [x] Style CSS de Home
 - [x] Responsive del Home
 - [x] Añadir iframe a Background Music
+
 
 #### Day Eight
 
@@ -194,21 +186,22 @@ Al ser hoy ya casi el último día que le podemos dedicar a este proyecto, mi ob
 - [x] Estilizar navbar
 - [x] Añadir fecha de hoy
 
+
 #### Day Nine
 
 ###### Viernes 24, Febrero 2023
 
 Como hoy es el último día que le podemos dedicar a este proyecto antes de las presetaciones, mi objectivo es acabar de corregir algunos errores de CSS
 
-- [ ] Añadir imagen para completar el background
-- [ ] Arreglar responsive del footer
+- [x] Añadir imagen para completar el background
+- [x] Arreglar responsive del footer
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Acerca de mi -->
 
-## Sobre mí
+## Acerca
 
 <!-- La sección "sobre mí" en un archivo README es una sección que proporciona información sobre el desarrollador o equipo detrás del proyecto.
 
@@ -221,7 +214,6 @@ En esta sección se puede incluir información como:
 Hola, soy Aina! Hace seis no sabía nada de programación. Venía de un mundo completamente diferente, de la educación. Dando un giro de 180º, deicidí arriesgarme y probar un nuevo camino. Este proyecto ha salido con pocos conocimientos pero muchas ganas y dedicación. Espero que os guste.
 
 Aina Gatell - aina.gatell@gmail.com
-
 
 Project Link: [https://final-project-kappa-fawn.vercel.app/auth/login]
 
@@ -236,7 +228,7 @@ Presentation Link: [https://docs.google.com/presentation/d/12x4MaUfIitir16PGRceB
 En esta sección me gustaría dar las gracias a todas las personas que, de alguna manera, han formado parte de este proyecto.
 
 Agradecer a los profesores por la dedicación, por todas las dudas resueltas y por levantarnos los ánimos.
-Aleix, gracias por el diseño.
+Aleix, gracias extras por tu ayuda con el diseño.
 
 Y, por supuesto, a nuestras compañeras y compañeros, por crear un ambiente de trabajo excelente y lúdico, siempre apoyándonos y, también, compartiendo penas.
 
@@ -258,6 +250,8 @@ En esta sección se puede incluir información como:
 
 En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos. -->
 
+En esta sección, voy a redactar el mayor problemaa técnico con el que me he encontrado durante el proyecto, que ha sido entender Vue. Yo ya venía perdida de la semana de aprender Java Script, y para mí Vue fue todo un reto. Aun así, con práctica, ayuda de profesores y compañeros, hemos conseguido entenderlo y aplicarlo al proyecto.
+
 ## Grande Error
 
 <!-- La sección "grande error" en un archivo README es una sección opcional que proporciona información sobre los errores importantes cometidos durante el desarrollo del proyecto.
@@ -270,4 +264,6 @@ En esta sección se puede incluir información como:
 - Lecciones aprendidas y recomendaciones para evitar errores similares en el futuro.
 
 En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron. -->
+En el caso de big mistake, podría decir que un error que me ha pasado factura más adelante ha sido que, al crear la stasks de prueba, les diera nombres absurdos. Eso me hizo imposible identificar algunos errores que tenía, como por ejemplo con el Modal. Es mejor utilizar nombres como "task 1, task 2, test", etc.
 
+Otro error, que no me ha resultado en nada serio pero podría, es no hacer push tan a menudo como debería. Al principio del proyecto había días que ni tan solo hacía push, pero fui entendiendo la importancia y acabé con más de 10 pushes al día.
